@@ -4,7 +4,7 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 export default component$(() => {
   return (
     <>
-      <p>My portfolio is currently in development</p>
+      <p>My portfolio is currently in development with github actions</p>
     </>
   );
 });
