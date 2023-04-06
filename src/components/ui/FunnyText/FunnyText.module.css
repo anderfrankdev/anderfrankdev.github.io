@@ -1,9 +1,8 @@
-
 .letter {
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   display: inline-block;
 }
-.letter:hover{
+.letter:hover {
   color: pink;
   transform: translateY(-10px) rotate(-10deg);
 }
