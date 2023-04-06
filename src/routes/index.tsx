@@ -18,7 +18,7 @@ export default component$(() => {
     <section class={styles.section}>
       <div class={styles.intro}>
         <div class={styles.img} ref={profilePic}>
-          <img src="/anderfrankdev.jpg" alt=""/>
+          <img src="/anderfrankdev_light.jpg" alt=""/>
         </div>
         <div class={
           styles.presentation
