@@ -1,9 +1,10 @@
 import { component$ } from "@builder.io/qwik"
 import styles from "./FunnyText.module.css"
 interface TextProps{
-	content:string
+	content:string,
+	letterClass:String
 }
-export const FunnyText = component$<TextProps>(({content}) => {
+export const FunnyText = component$<TextProps>(({content,letterClass}) => {
 
 	return (
 		<span style={{
@@ -13,7 +14,14 @@ export const FunnyText = component$<TextProps>(({content}) => {
 			{...content.split("").map(letter=>{
 				const isWhiteSpace = letter === " "
 				const whiteSpace = (<>&nbsp;</>)
-				const letterEl = <span key={letter} class={styles.letter}>{letter}</span>
+				const itemClass = `${styles.letter } ${letterClass}`
+				const letterEl = 
+					<span 
+						key={letter} 
+						class={itemClass}
+					>
+						{letter}
+					</span>
 				
 				return isWhiteSpace ? whiteSpace : letterEl
 			})}
