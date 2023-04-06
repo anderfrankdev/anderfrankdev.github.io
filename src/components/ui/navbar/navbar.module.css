@@ -5,20 +5,21 @@
 	padding-inline: 1rem;
 	padding-block:0.5rem;
 	width: 100%;
-	background: #fff;
+	background: #3586ff;
 	z-index: 999;
 	top:0;
 	position: fixed;
+	color:#fff;
 }
-
-.logo{
-	align-self: baseline;
+.logo_img_dark{
+	display: none;
 }
-
 .logo_img{
 	position: relative;
 	transition: 1s all ease;
 	cursor: pointer;
+	width: var(--step-3);
+	height: var(--step-3);
 }
 
 .logo_img:hover{
@@ -36,11 +37,49 @@
 .nav_links li{
 	margin-inline: 2rem;
 	font-weight: 600;
-	font-size: var(--step-1);
+	font-size: var(--step-0);
 	transition: 0.5s all ease;
 	cursor: pointer;
 }
-
 .nav_links li:hover{
-	color: darkcyan;
+	color: pink;
+}
+.mobile_btn{
+	display: none;
+}
+@media (max-width:600px) {
+	.header{
+		display: none;
+	}
+	.logo_img{
+		display: none;
+	}
+	.nav_links{
+		display: none;
+	}
+	.mobile_btn img{
+		z-index: 1001;
+		filter: brightness(4);
+	}
+	.mobile_btn{
+  	z-index: 1001;
+  	position: absolute;
+  	top: 0rem;
+  	display: block;
+  	left: 0rem;
+  	cursor: pointer;
+  	padding: 1rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .header {
+    color: #ffffff;
+    background-color: #213547;
+  }
+  .logo_img{
+  	display: none;
+  }
+  .logo_img_dark{
+  	display: initial;
+  }
 }

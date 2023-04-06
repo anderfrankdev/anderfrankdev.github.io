@@ -10,6 +10,8 @@
   
   --animate-duration: 1.5s;
   --animate-delay: 2s;
+  color: #ffffff;
+  background: #3586ff;
 }
 
 body{
@@ -20,4 +22,10 @@ body{
 
 .page{
   position: relative;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #ffffff;
+    background-color: #213547;
+  }
 }
