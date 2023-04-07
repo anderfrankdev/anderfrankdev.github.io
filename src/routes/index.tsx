@@ -1,12 +1,15 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { Introduction } from "~/components/introduction/Introduction";
+import { Invitation } from "~/components/invitation/Invitation";
 
 export default component$(() => {
   return (
     <>
-      <Introduction />
-      <div class=""></div>
+      <div class="info-container">
+        <Introduction />
+        <Invitation />
+      </div>
     </>
   );
 });
