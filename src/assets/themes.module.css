@@ -1,0 +1,69 @@
+.medium,
+.dark {
+  color: white;
+}
+.medium {
+  background: #004fc2;
+}
+.dark {
+  background: #213547;
+}
+
+.light {
+  background: #fff;
+  color: black !important;
+}
+.light [data-button] {
+  color: #800080 !important;
+  border-color: #800080 !important;
+}
+.light [data-button]:hover {
+  color: #006400 !important;
+  border-color: #006400 !important;
+}
+
+.dark [data-button],
+.medium [data-button] {
+  color: #ffffbd;
+  border-color: #ffffbd !important;
+}
+
+.dark [data-button],
+.medium [data-button] {
+  color: #ffffbd;
+  border-color: #ffffbd !important;
+}
+.dark [data-select_theme],
+.medium [data-select_theme] {
+  background: white;
+  color: black;
+}
+
+.light [data-select_theme] {
+  background: black;
+  color: white !important;
+}
+
+.light [data-select_theme] [data-selected="true"] {
+  color: #ffa;
+}
+.dark [data-select_theme] [data-selected="true"],
+.medium [data-select_theme] [data-selected="true"] {
+  color: #006400;
+}
+.light div[data-nav_guide] > div {
+  background-color: #800080;
+}
+.light div[data-nav_guide] > div[data-is-visible="true"] {
+  background-color: #006400;
+}
+
+.light [data-wave] {
+  background-color: transparent;
+  background: url(/wa.png);
+  background-size: 1000px 100px;
+}
+
+.light [data-nav-btn] {
+  filter: brightness(0) !important;
+}

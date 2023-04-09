@@ -1,9 +1,13 @@
-import { component$, useOnWindow, $ } from "@builder.io/qwik";
+import { component$, useOnWindow, $, useContext } from "@builder.io/qwik";
 import styles from "./navbar.module.css";
 import { closeNav } from "./closeNav.event";
 import { openNav } from "./openNav.event";
+import { ThemeBtn } from "./ThemeBtn";
+import { ThemeContext } from "~/routes/layout";
 
 export const Navbar = component$(() => {
+  const theme = useContext(ThemeContext);
+
   useOnWindow(
     "resize",
     $(() => {
@@ -26,17 +30,17 @@ export const Navbar = component$(() => {
   return (
     <>
       <header
+        data-nav
         class={styles.header + " animate__animated"}
         id="nav"
         style={"--animate-duration: .7s;"}
       >
         <div class={styles.logo}>
-          <img class={styles.logo_img} src="/logo.png" alt="logo" id="logo" />
           <img
-            class={styles.logo_img + " " + styles.logo_img_dark}
-            src="/logo_dark.png"
+            class={styles.logo_img}
+            src={`/logo_${theme.value}.png`}
             alt="logo"
-            id="logo-dark"
+            id="logo"
           />
         </div>
         <nav
@@ -50,6 +54,9 @@ export const Navbar = component$(() => {
             }
             id="nav-links"
           >
+            <li class={styles.theme_btn}>
+              <ThemeBtn />
+            </li>
             <li class={""}>Blog</li>
             <li class={""}>About</li>
             <li class={""}>Work</li>
@@ -67,7 +74,7 @@ export const Navbar = component$(() => {
           X
         </div>
       </header>
-      <div class={styles.mobile_btn} onClick$={openNav}>
+      <div class={styles.mobile_btn} data-nav-btn onClick$={openNav}>
         <img width={42} height={42} src="/list.svg" alt="menu button" />
       </div>
     </>

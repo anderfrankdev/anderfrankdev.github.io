@@ -1,0 +1,22 @@
+.info_container {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: block mandatory;
+  scroll-behavior: smooth;
+}
+.info_container > * {
+  scroll-snap-align: start;
+}
+@media (max-width: 37.5em) {
+  .info_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: inline mandatory;
+  }
+}

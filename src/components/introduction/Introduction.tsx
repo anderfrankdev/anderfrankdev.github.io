@@ -20,7 +20,7 @@ export const Introduction = component$<any>(() => {
 
   return (
     <section class={styles.section}>
-      <div class={styles.intro}>
+      <div class={styles.intro} id="intro">
         <div class={"animate__animated animate__fadeInDown " + styles.img}>
           <img src="/anderfrankdev_light.jpg" alt="" />
         </div>
@@ -40,10 +40,10 @@ export const Introduction = component$<any>(() => {
           </p>
         </div>
       </div>
-      <div class={`${styles.air} ${styles.air1}`}></div>
-      <div class={`${styles.air} ${styles.air2}`}></div>
-      <div class={`${styles.air} ${styles.air3}`}></div>
-      <div class={`${styles.air} ${styles.air4}`}></div>
+      <div class={`${styles.air} ${styles.air1}`} data-wave></div>
+      <div class={`${styles.air} ${styles.air2}`} data-wave></div>
+      <div class={`${styles.air} ${styles.air3}`} data-wave></div>
+      <div class={`${styles.air} ${styles.air4}`} data-wave></div>
     </section>
   );
 });

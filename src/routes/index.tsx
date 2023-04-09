@@ -1,14 +1,41 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useContext, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { Introduction } from "~/components/introduction/Introduction";
-import { Invitation } from "~/components/invitation/Invitation";
+import { Slide } from "~/components/slide/Slide";
+import { NavGuide } from "~/components/nav-guide/NavGuide";
+import styles from "./index.module.css";
+import { slides } from "~/data/ui";
+import { ThemeContext } from "./layout";
 
 export default component$(() => {
+  const theme_context = useContext(ThemeContext);
+
+  useVisibleTask$(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      theme_context.value = "dark";
+    }
+  });
+
   return (
     <>
-      <div class="info-container">
+      <div id="info_container" class={styles.info_container}>
+        <NavGuide />
         <Introduction />
-        <Invitation />
+
+        <Slide
+          title={slides[0].title}
+          content={slides[0].content}
+          action={slides[0].action}
+          image={"Building"}
+          revert={false}
+        />
+        <Slide
+          title={slides[0].title}
+          content={slides[0].title}
+          action={slides[0].action}
+          revert={true}
+          image={"Building"}
+        />
       </div>
     </>
   );
