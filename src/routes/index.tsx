@@ -31,7 +31,7 @@ export default component$(() => {
         />
         <Slide
           title={slides[1].title}
-          content={slides[1].title}
+          content={slides[1].content}
           action={slides[1].action}
           revert={true}
           image={"ReactLogo"}

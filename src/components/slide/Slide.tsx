@@ -6,7 +6,7 @@ import { ReactLogo } from "../ui/ReactLogo/ReactLogo";
 
 const images: any = {
   Building: <Building />,
-  ReactLogo:<ReactLogo/>
+  ReactLogo: <ReactLogo />,
 };
 
 export const Slide = component$((data: any) => {

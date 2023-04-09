@@ -1,15 +1,25 @@
-import { component$, useVisibleTask$ } from "@builder.io/qwik";
-import "./react-logo.css"
+import { component$, useContext, useVisibleTask$ } from "@builder.io/qwik";
+import "./react-logo.css";
+import { ThemeContext } from "~/routes/layout";
 
 export const ReactLogo = component$(() => {
-  useVisibleTask$(()=>{
-    document.querySelector<any>(".react-logo__ring--2")!.style.transform="rotateZ(0deg)"
-    document.querySelector<any>(".react-logo__ring--3")!.style.transform="rotateZ(0deg)"
-  })
+  const theme = useContext(ThemeContext);
+
+  useVisibleTask$(() => {
+    document.querySelector<any>(".react-logo__ring--2")!.style.transform =
+      "rotateZ(0deg)";
+    document.querySelector<any>(".react-logo__ring--3")!.style.transform =
+      "rotateZ(0deg)";
+    setTimeout(() => {
+      document.querySelector<any>(".react-logo")!.style.animation =
+        "react-rotate 7s infinite linear";
+    }, 1700);
+  });
   return (
     <div class={"building"}>
       <svg
         class="react-logo"
+        data-theme={theme.value}
         id="Layer_2"
         data-name="Layer 2"
         xmlns="http://www.w3.org/2000/svg"

@@ -6,13 +6,7 @@
   align-items: center;
   padding: 1rem;
 }
-.container[data-revert="true"] {
-  flex-direction: row-reverse;
-}
-.container[data-revert="true"]:last-child {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
+
 .button {
   padding-inline: 4rem;
   padding-block: 1rem;
@@ -40,10 +34,13 @@
   width: calc(100% - 300px - 4rem - 2rem);
   padding: 2rem;
   margin-right: 4rem;
+  margin-left: 2rem;
   transition: 0.7s all ease;
   transform: scale(0.65);
 }
-
+.container[data-revert="true"]:first-child {
+  margin-left: 0;
+}
 .invitation > h2 {
   font-size: var(--step-4);
 }
@@ -51,6 +48,16 @@
 .invitation > p {
   font-size: var(--step-1);
 }
+.container[data-revert="true"] {
+  flex-direction: row-reverse;
+}
+.container[data-revert="true"] > div:first-child {
+  margin-inline: 1rem;
+}
+.container[data-revert="true"] > div:last-child {
+  margin-left: 1rem;
+}
+
 @media (max-height: 37.5em) {
   .button {
     margin-top: 1rem;
@@ -63,9 +70,6 @@
     justify-content: center;
     align-items: center;
     padding-top: 2rem;
-  }
-  .container[data-revert="true"]:last-child {
-    margin: 0;
   }
   .invitation {
     width: 100%;

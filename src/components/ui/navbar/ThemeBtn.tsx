@@ -10,6 +10,13 @@ import { ThemeContext } from "~/routes/layout";
 
 export const ThemeBtn = component$(() => {
   const theme = useContext(ThemeContext);
+  useVisibleTask$(({ track }) => {
+    track(theme);
+    document
+      .querySelector<any>("[data-selected]")
+      ?.removeAttribute("data-selected");
+    document.getElementById(theme.value)!.dataset.selected = "true";
+  });
   const container = useSignal<any>(null);
   const onSetTheme = $((event: any) => {
     theme.value = event.target.id.toLowerCase();
@@ -19,9 +26,7 @@ export const ThemeBtn = component$(() => {
       .removeAttribute("data-selected");
     event.target.dataset.selected = "true";
   });
-  useVisibleTask$(() => {
-    document.getElementById(theme.value)!.dataset.selected = "true";
-  });
+
   return (
     <details ref={container} class={styles.container}>
       <summary>Theme</summary>

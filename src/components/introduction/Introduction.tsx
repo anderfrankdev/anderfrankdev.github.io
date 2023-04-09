@@ -12,11 +12,11 @@ export const Introduction = component$<any>(() => {
       theme.value != "light" ? "animate_shake" : "animate_shake_light";
 
     if (theme.value === "light") {
-      nameLatters.forEach((l, i) => {
+      nameLatters.forEach((l) => {
         l.dataset.theme = "light";
       });
     } else {
-      nameLatters.forEach((l, i) => {
+      nameLatters.forEach((l) => {
         l.removeAttribute("data-theme");
       });
     }
@@ -24,8 +24,6 @@ export const Introduction = component$<any>(() => {
       nameLatters.forEach((l, i) => {
         setTimeout(() => {
           l.classList.toggle(nameLattersClass);
-          if (nameLattersClass === "animate_shake_light") {
-          }
           setTimeout(() => {
             l.classList.toggle(nameLattersClass);
           }, 400);

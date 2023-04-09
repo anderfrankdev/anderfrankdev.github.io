@@ -15,9 +15,24 @@ export const Dark = component$(() => {
   const building = useSignal<any>("#F1FAEE");
   const treeLine = useSignal<any>("#ECB6B6");
 
-  useVisibleTask$(({ track }) => {
-    isVisibleBuilding.value = true;
-    track(theme);
+  useVisibleTask$(({ cleanup }) => {
+    const element = document.querySelector("#building")!;
+    const cb = (entries: any) => {
+      entries.forEach((entry: any) => {
+        if (entry.isIntersecting) {
+          isVisibleBuilding.value = true;
+        } else {
+          isVisibleBuilding.value = false;
+        }
+      });
+    };
+    const observer = new IntersectionObserver(cb, {
+      root: document.querySelector("#info_container"),
+      threshold: 0.5,
+    });
+    if (element) {
+      observer.observe(element);
+    }
     if (theme.value === "dark") {
       background.value = "#213547";
       trees.value = "#C8FF00";
@@ -28,14 +43,17 @@ export const Dark = component$(() => {
     if (theme.value === "medium") {
       background.value = "#004fc2";
     }
+    cleanup(() => {
+      isVisibleBuilding.value = false;
+      observer.disconnect();
+    });
   });
-
+  console.log(isVisibleBuilding);
   return (
-    <div style={{}} class={"building"}>
+    <div class={"building"} id="building">
       {isVisibleBuilding.value && (
         <svg
-          width="68"
-          height="66"
+          class={"building"}
           viewBox="0 0 68 66"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
