@@ -32,7 +32,10 @@ body {
   color: pink;
   transform: translateY(-10px) rotate(-10deg);
 }
-
+.animate_shake_light {
+  color: purple;
+  transform: translateY(-10px) rotate(-10deg);
+}
 ::-webkit-scrollbar {
   height: 8px;
   width: 8px;

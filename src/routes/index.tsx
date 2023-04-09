@@ -30,11 +30,11 @@ export default component$(() => {
           revert={false}
         />
         <Slide
-          title={slides[0].title}
-          content={slides[0].title}
-          action={slides[0].action}
+          title={slides[1].title}
+          content={slides[1].title}
+          action={slides[1].action}
           revert={true}
-          image={"Building"}
+          image={"ReactLogo"}
         />
       </div>
     </>

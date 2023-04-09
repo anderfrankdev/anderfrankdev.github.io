@@ -1,17 +1,33 @@
-import { component$, useVisibleTask$ } from "@builder.io/qwik";
+import { component$, useContext, useVisibleTask$ } from "@builder.io/qwik";
 import styles from "./introduction.module.css";
 import { FunnyText } from "../ui/FunnyText/FunnyText";
+import { ThemeContext } from "~/routes/layout";
 
 export const Introduction = component$<any>(() => {
-  useVisibleTask$(async () => {
-    const nameLatters = document.querySelectorAll(".shake");
+  const theme = useContext(ThemeContext);
+  useVisibleTask$(async ({ track }) => {
+    track(theme);
+    const nameLatters = document.querySelectorAll<any>(".shake");
+    const nameLattersClass =
+      theme.value != "light" ? "animate_shake" : "animate_shake_light";
+
+    if (theme.value === "light") {
+      nameLatters.forEach((l, i) => {
+        l.dataset.theme = "light";
+      });
+    } else {
+      nameLatters.forEach((l, i) => {
+        l.removeAttribute("data-theme");
+      });
+    }
     setTimeout(() => {
       nameLatters.forEach((l, i) => {
         setTimeout(() => {
-          l.classList.toggle("animate_shake");
-
+          l.classList.toggle(nameLattersClass);
+          if (nameLattersClass === "animate_shake_light") {
+          }
           setTimeout(() => {
-            l.classList.toggle("animate_shake");
+            l.classList.toggle(nameLattersClass);
           }, 400);
         }, i * 400 + 1000);
       });

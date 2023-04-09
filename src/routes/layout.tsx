@@ -8,7 +8,7 @@ import themeStyles from "~/assets/themes.module.css";
 export const ThemeContext = createContextId<Signal<string>>("theme-context");
 
 export default component$(() => {
-  const theme = useSignal("medium");
+  const theme = useSignal("light");
   useContextProvider(ThemeContext, theme);
 
   return (

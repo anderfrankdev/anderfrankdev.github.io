@@ -6,3 +6,7 @@
   color: pink;
   transform: translateY(-10px) rotate(-10deg);
 }
+.letter[data-theme="light"]:hover {
+  color: purple;
+  transform: translateY(-10px) rotate(-10deg);
+}
