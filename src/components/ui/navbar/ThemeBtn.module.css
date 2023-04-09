@@ -12,3 +12,8 @@
 .options div {
   padding: 1rem;
 }
+@media (max-width: 37.5em) {
+  .options {
+    font-size: 2.2rem;
+  }
+}

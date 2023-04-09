@@ -4,11 +4,11 @@
   margin: 0;
   height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: block mandatory;
+  scroll-snap-type: block proximity;
   scroll-behavior: smooth;
 }
 .info_container > * {
-  scroll-snap-align: start;
+  scroll-snap-align: end;
 }
 @media (max-width: 37.5em) {
   .info_container {

@@ -66,7 +66,6 @@ export const Navbar = component$(() => {
         <div
           class={styles.mobile_btn + " animate__animated" + " animate__fadeIn"}
           style={{
-            color: "white",
             "font-size": "3rem",
           }}
           onClick$={closeNav}

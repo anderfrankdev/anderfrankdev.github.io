@@ -117,5 +117,6 @@
     left: 0rem;
     cursor: pointer;
     padding: 1rem;
+    color: inherit;
   }
 }
