@@ -12,9 +12,10 @@ const images: any = {
 };
 
 export const Slide = component$((data: any) => {
+  const fullscreen = !images[data.image]?true:false
   return (
     <section class={styles.container} data-revert={data.revert ? "true" : ""}>
-      <SlideMessage {...{ ...data }} />
+      <SlideMessage {...{ ...data, fullscreen }} />
       {images[data.image]}
     </section>
   );

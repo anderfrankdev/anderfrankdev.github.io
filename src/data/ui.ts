@@ -71,7 +71,7 @@ export const slidesES: UiData["slide"][] = [
   },
   {
     title: "Habilidades",
-    content: `Como desarrollador y ser humano la habilidad que más he cuidado es mi comunicación. Antes de encontrar mi pasión por la ingeniería de software trabajé como vendedor telefonico en Interkontakt C.A. con el objetivo de practicar mi comunicación verbal y recientemente comencé un nuevo blog para practicar mi escritura, por lo que me encanta describirme como un buen comunicador tanto en inglés como en español. Soy una persona empática que prioriza las necesidades de mis clientes y usuarios finales. También me gusta asumir responsabilidades dentro de equipos y ofrecer soluciones.`,
+    content: `Una de las habilidades que más he cuidado es mi comunicación. Antes de encontrar mi pasión por la ingeniería de software trabajé como vendedor en Interkontakt C.A. con el objetivo de mejorar mi comunicación y recientemente comencé un nuevo blog para practicar mi escritura, por lo que me encanta describirme como un buen comunicador tanto en inglés como en español. Soy una persona empática que prioriza las necesidades de mis clientes y usuarios finales. También me gusta asumir responsabilidades dentro de equipos y ofrecer soluciones.`,
     action: {
       text: "Sobre mi",
       link: "#",

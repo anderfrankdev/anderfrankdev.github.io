@@ -41,6 +41,10 @@
 .container[data-revert="true"]:first-child {
   margin-left: 0;
 }
+.invitation[data-fullscreen="true"]{
+  width: 90%;
+  margin-left: 3rem;
+}
 .invitation > h2 {
   font-size: var(--step-4);
 }
@@ -62,6 +66,7 @@
   .button {
     margin-top: 1rem;
   }
+  
 }
 @media (max-width: 59.375em) {
   .container,
@@ -85,6 +90,12 @@
   }
   .invitation {
     font-size: var(--step-0);
+    text-align: justify;
+    
+  }
+  .invitation[data-fullscreen="true"]{
+    width: 100%;
+    padding: 1rem;
   }
   .button {
     margin-top: 0.6rem;

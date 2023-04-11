@@ -28,7 +28,7 @@
     left: calc(100% - 3rem * 5);
   }
 }
-@media (max-width: 280px) {
+@media (max-width: 320px) {
   .container {
     left: calc(100% - 1.5rem * 5);
   }
