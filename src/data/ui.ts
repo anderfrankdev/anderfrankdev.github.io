@@ -23,7 +23,15 @@ export const slides: UiData["slide"][] = [
     title: "Client side development",
     content: `When I work  in the frontend my main goal is to create amazing, good looking and highly interactive interfaces while keeping the best performance and maximum attention to every detail. I prioritize accesibility, responsive design and writing clean, efficient, and maintainable code.`,
     action: {
-      text: "About my approach",
+      text: "My frontend stack",
+      link: "#",
+    },
+  },
+  {
+    title: "Server side development",
+    content: `On the backend I heavily focus on the security and scalability of web servers, to accomplish this I implement security measures, authentication protocols, data validation and error handling to ensure the reliability and security of the applications. I also document every API I work on, no matter if it is  RESTful or graphql.`,
+    action: {
+      text: "My backend stack",
       link: "#",
     },
   },

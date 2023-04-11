@@ -10,6 +10,7 @@ specifiers:
   animate.css: ^4.1.1
   eslint: 8.36.0
   eslint-plugin-qwik: 0.100.0
+  gsap: ^3.11.5
   prettier: 2.8.7
   typescript: 5.0.2
   undici: 5.21.0
@@ -28,6 +29,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.56.0_j4766f7ecgqbon3u7zlxn5zszu
   eslint: 8.36.0
   eslint-plugin-qwik: 0.100.0_eslint@8.36.0
+  gsap: 3.11.5
   prettier: 2.8.7
   typescript: 5.0.2
   undici: 5.21.0
@@ -1244,6 +1246,10 @@ packages:
 
   /grapheme-splitter/1.0.4:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
+    dev: true
+
+  /gsap/3.11.5:
+    resolution: {integrity: sha512-Q89nKCLgoX5xUjznh9LcaIUkz54k1voNucT1Rpf9SJNFIQznBwFqt5qUUQbeVInFyN/n18OUJkpeI6CNEDt74w==}
     dev: true
 
   /has-bigints/1.0.2:

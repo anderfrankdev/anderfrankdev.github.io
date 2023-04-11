@@ -1,0 +1,76 @@
+.st1 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #333333;
+}
+#nodejs[data-theme="dark"] .st1, 
+#nodejs[data-theme="medium"] .st1{
+  fill: #fff;
+} 
+.st2 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #007700;
+}
+#nodejs[data-theme="dark"] .st2, 
+#nodejs[data-theme="medium"] .st2{
+  fill: #699F63;
+} 
+.st3 {
+  clip-path: url(#XMLID_7_);
+}
+.st4 {
+  fill: none;
+}
+.st5 {
+  fill: url(#SVGID_1_);
+}
+.st6 {
+  fill: url(#SVGID_2_);
+}
+.st7 {
+  fill: url(#SVGID_3_);
+}
+.st8 {
+  fill: url(#SVGID_4_);
+}
+.st9 {
+  fill: url(#SVGID_5_);
+}
+.st10 {
+  fill: url(#SVGID_6_);
+}
+.st11 {
+  clip-path: url(#XMLID_9_);
+}
+.st12 {
+  fill: url(#SVGID_7_);
+}
+.st13 {
+  fill: url(#SVGID_8_);
+}
+.st14 {
+  fill: url(#SVGID_9_);
+}
+.st15 {
+  fill: url(#SVGID_10_);
+}
+.st16 {
+  fill: url(#SVGID_11_);
+}
+.st17 {
+  fill: url(#SVGID_12_);
+}
+
+
+#sNodejs,
+#rNodejs {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+#jNodejs {
+  stroke-dasharray: 730;
+  stroke-dashoffset: 730;
+}
+

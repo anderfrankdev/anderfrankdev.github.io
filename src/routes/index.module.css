@@ -5,7 +5,7 @@
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
-  scroll-snap-type: block proximity;
+  scroll-snap-type: block mandatory;
   scroll-behavior: smooth;
 }
 .info_container > * {

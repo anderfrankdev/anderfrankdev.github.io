@@ -36,6 +36,13 @@ export default component$(() => {
           revert={true}
           image={"ReactLogo"}
         />
+        <Slide
+          title={slides[2].title}
+          content={slides[2].content}
+          action={slides[2].action}
+          revert={false}
+          image={"NodeLogo"}
+        />
       </div>
     </>
   );
