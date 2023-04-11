@@ -17,6 +17,9 @@
   color: #800080 !important;
   border-color: #800080 !important;
 }
+.light nav li:hover {
+  color: #006400 !important;
+}
 .light [data-button]:hover {
   color: #006400 !important;
   border-color: #006400 !important;
@@ -44,11 +47,14 @@
   color: white !important;
 }
 
-.light [data-select_theme] [data-selected="true"] {
+.light [data-select_theme] [data-selected="true"],
+.light [data-select_theme] [data-selected-lan="true"] {
   color: #ffa;
 }
 .dark [data-select_theme] [data-selected="true"],
-.medium [data-select_theme] [data-selected="true"] {
+.medium [data-select_theme] [data-selected="true"],
+.dark [data-select_theme] [data-selected-lan="true"],
+.medium [data-select_theme] [data-selected-lan="true"] {
   color: #006400;
 }
 .light div[data-nav_guide] > div {

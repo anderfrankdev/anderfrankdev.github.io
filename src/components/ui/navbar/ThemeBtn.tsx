@@ -6,10 +6,12 @@ import {
   useVisibleTask$,
 } from "@builder.io/qwik";
 import styles from "./ThemeBtn.module.css";
-import { ThemeContext } from "~/routes/layout";
+import { LanContext, ThemeContext } from "~/routes/layout";
 
 export const ThemeBtn = component$(() => {
   const theme = useContext(ThemeContext);
+  const lan = useContext(LanContext);
+
   useVisibleTask$(({ track }) => {
     track(theme);
     document
@@ -29,16 +31,19 @@ export const ThemeBtn = component$(() => {
 
   return (
     <details ref={container} class={styles.container}>
-      <summary>Theme</summary>
+      <summary>
+        {lan.value==="en"? "Theme":"Tema"}
+      </summary>
       <div class={styles.options} data-select_theme>
         <div onClick$={onSetTheme} id="light">
-          Light
+          {lan.value==="en"? "Light":"Claro"}
         </div>
         <div onClick$={onSetTheme} id="medium">
-          Medium
+          {lan.value==="en"? "Medium":"Medio"}
+
         </div>
         <div onClick$={onSetTheme} id="dark">
-          Dark
+          {lan.value==="en"? "Dark":"Oscuro"}
         </div>
       </div>
     </details>

@@ -1,10 +1,12 @@
 import { component$, useContext, useVisibleTask$ } from "@builder.io/qwik";
 import styles from "./introduction.module.css";
 import { FunnyText } from "../ui/FunnyText/FunnyText";
-import { ThemeContext } from "~/routes/layout";
+import { LanContext, ThemeContext } from "~/routes/layout";
 
 export const Introduction = component$<any>(() => {
   const theme = useContext(ThemeContext);
+  const lan = useContext(LanContext);
+
   useVisibleTask$(async ({ track }) => {
     track(theme);
     const nameLatters = document.querySelectorAll<any>(".shake");
@@ -43,14 +45,31 @@ export const Introduction = component$<any>(() => {
         >
           <span>
             {" "}
-            Hi, my name is&nbsp;
+            {lan.value==="en"
+              ? "Hi, my name is"
+              : "Hola, me llamo"}&nbsp;
             <span class={styles.name}>
               <FunnyText content="Ander" letterClass="shake" />
             </span>
           </span>
           <p class={styles.description}>
-            I'm a <b>passionate fullstack web developer</b> from Caracas
-            Venezuela.
+            {
+              lan.value==="en"
+              ? "I'm a"
+              : "Soy un"
+            } 
+            <b>
+              {
+                lan.value==="en"
+                ? " passionate fullstack web developer "
+                : " apasionado desarrollador web fullstack "
+              }
+            </b>
+            {
+              lan.value==="en"
+              ? "from Caracas Venezuela."
+              : "residenciado en Caracas Venezuela."
+            }
           </p>
         </div>
       </div>

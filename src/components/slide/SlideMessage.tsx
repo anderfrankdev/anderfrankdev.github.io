@@ -4,8 +4,28 @@ import { type UiData } from "~/data/ui";
 export const SlideMessage = component$(
   ({ title, content, action }: UiData["slide"]) => {
     const text = useSignal<any>(null);
-    useVisibleTask$(() => {
+    useVisibleTask$(({ cleanup }) => {
       text.value.style.transform = "scale(1)";
+      const cb = (entries: any) => {
+        entries.forEach((entry: any) => {
+          if (entry.isIntersecting) {
+            text.value.style.transform = "scale(1)";
+          } else {
+            text.value.style.transform = "scale(0.8)";
+          }
+        });
+      };
+      const observer = new IntersectionObserver(cb, {
+        root: document.querySelector("#info_container"),
+        threshold: 0.5,
+      });
+      if (text.value) {
+        observer.observe(text.value);
+      }
+
+      cleanup(() => {
+        observer.disconnect();
+      });
     });
 
     return (

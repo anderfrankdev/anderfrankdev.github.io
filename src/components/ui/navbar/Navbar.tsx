@@ -3,10 +3,12 @@ import styles from "./navbar.module.css";
 import { closeNav } from "./closeNav.event";
 import { openNav } from "./openNav.event";
 import { ThemeBtn } from "./ThemeBtn";
-import { ThemeContext } from "~/routes/layout";
+import { LanContext, ThemeContext } from "~/routes/layout";
+import { LanBtn } from "./LanBtn";
 
 export const Navbar = component$(() => {
   const theme = useContext(ThemeContext);
+  const lan = useContext(LanContext);
 
   useOnWindow(
     "resize",
@@ -54,13 +56,24 @@ export const Navbar = component$(() => {
             }
             id="nav-links"
           >
+            <li class={styles.theme_btn} data-lan-btn>
+              <LanBtn />
+            </li>
             <li class={styles.theme_btn}>
               <ThemeBtn />
             </li>
-            <li class={""}>Blog</li>
-            <li class={""}>About</li>
-            <li class={""}>Work</li>
-            <li class={""}>Contact</li>
+            <li class={""}>
+              Blog
+            </li>
+            <li class={""}>
+              {lan.value==="en"? "About":"Sobre mi"}
+            </li>
+            <li class={""}>
+              {lan.value==="en"? "Work":"Mi trabajo"}
+            </li>
+            <li class={""}>
+              {lan.value==="en"? "Contact":"Contacto"}
+            </li>
           </ul>
         </nav>
         <div

@@ -2,37 +2,48 @@ import { useSignal, useStore, useVisibleTask$ } from "@builder.io/qwik";
 import { useContext } from "@builder.io/qwik";
 import { component$ } from "@builder.io/qwik";
 import { ThemeContext } from "../../../routes/layout";
-import {TimelineMax,Linear} from "gsap"
-import "./NodejsLogo.css"
+import { TimelineMax, Linear } from "gsap";
+import "./NodejsLogo.css";
 export const NodejsLogo = component$(() => {
   const theme = useContext(ThemeContext);
-  const htmlString = useSignal<any>(null)
+  const htmlString = useSignal<any>(null);
   const colors = useStore({
-    background:"#fff",
-    color:"#006400"
-  })
-  useVisibleTask$(({track}) => {
-    track(theme)
-    if(theme.value==="dark"){
-      colors.background="#213547"
-      colors.color="#699F63"
+    background: "#fff",
+    color: "#006400",
+  });
+  useVisibleTask$(({ track }) => {
+    track(theme);
+    if (theme.value === "dark") {
+      colors.background = "#213547";
+      colors.color = "#699F63";
     }
-    if(theme.value==="medium"){
-      colors.background="#004fc2"
-      colors.color="#fff"
+    if (theme.value === "medium") {
+      colors.background = "#004fc2";
+      colors.color = "#fff";
     }
-    if(theme.value==="light"){
-      colors.background="#fff"
-      colors.color="#007700"
+    if (theme.value === "light") {
+      colors.background = "#fff";
+      colors.color = "#007700";
     }
     const nodejsAnim = new TimelineMax();
 
-    const letters = ['#sNodejs', '#jNodejs'];
+    const letters = ["#sNodejs", "#jNodejs"];
 
-    nodejsAnim.staggerFromTo('.stagger', 0.5, {autoAlpha:0}, {autoAlpha: 1}, 0.2)
-    nodejsAnim.to(letters, 0.6, {strokeDashoffset: 0, ease:Linear.easeNone})
-    nodejsAnim.fromTo(letters, 0.5, {fill: colors.background}, {fill: colors.color})
-    nodejsAnim.fromTo('#rNodejs', 0.2, {autoAlpha: 0}, {autoAlpha:1})
+    nodejsAnim.staggerFromTo(
+      ".stagger",
+      0.5,
+      { autoAlpha: 0 },
+      { autoAlpha: 1 },
+      0.2
+    );
+    nodejsAnim.to(letters, 0.6, { strokeDashoffset: 0, ease: Linear.easeNone });
+    nodejsAnim.fromTo(
+      letters,
+      0.5,
+      { fill: colors.background },
+      { fill: colors.color }
+    );
+    nodejsAnim.fromTo("#rNodejs", 0.2, { autoAlpha: 0 }, { autoAlpha: 1 });
   });
   return (
     <div class={"building"}>
@@ -268,7 +279,7 @@ export const NodejsLogo = component$(() => {
           </g>
         </g>
       </svg>
-      <div dangerouslySetInnerHTML={htmlString.value}></div> 
+      <div dangerouslySetInnerHTML={htmlString.value}></div>
     </div>
   );
 });

@@ -15,7 +15,8 @@ export const Dark = component$(() => {
   const building = useSignal<any>("#F1FAEE");
   const treeLine = useSignal<any>("#ECB6B6");
 
-  useVisibleTask$(({ cleanup }) => {
+  useVisibleTask$(({ cleanup,track }) => {
+    track(theme)
     const element = document.querySelector("#building")!;
     const cb = (entries: any) => {
       entries.forEach((entry: any) => {

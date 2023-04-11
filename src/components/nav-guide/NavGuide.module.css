@@ -25,6 +25,15 @@
   .container {
     display: flex;
     top: 1rem;
-    left: calc(100% - 3rem * 3);
+    left: calc(100% - 3rem * 5);
   }
+}
+@media (max-width: 280px) {
+  .container {
+    left: calc(100% - 1.5rem * 5);
+  }
+  .point {
+    margin: 0;
+    margin-right: 0.5rem;
+  } 
 }

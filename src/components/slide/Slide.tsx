@@ -8,7 +8,7 @@ import { NodejsLogo } from "../ui/NodejsLogo/NodejsLogo";
 const images: any = {
   Building: <Building />,
   ReactLogo: <ReactLogo />,
-  NodeLogo:<NodejsLogo/>
+  NodeLogo: <NodejsLogo />,
 };
 
 export const Slide = component$((data: any) => {

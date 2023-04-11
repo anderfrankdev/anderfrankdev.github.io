@@ -43,6 +43,7 @@ export const NavGuide = component$(() => {
       <div class={styles.point} id="1"></div>
       <div class={styles.point} id="2"></div>
       <div class={styles.point} id="3"></div>
+      <div class={styles.point} id="4"></div>
     </div>
   );
 });

@@ -3,19 +3,19 @@
   clip-rule: evenodd;
   fill: #333333;
 }
-#nodejs[data-theme="dark"] .st1, 
-#nodejs[data-theme="medium"] .st1{
+#nodejs[data-theme="dark"] .st1,
+#nodejs[data-theme="medium"] .st1 {
   fill: #fff;
-} 
+}
 .st2 {
   fill-rule: evenodd;
   clip-rule: evenodd;
   fill: #007700;
 }
-#nodejs[data-theme="dark"] .st2, 
-#nodejs[data-theme="medium"] .st2{
-  fill: #699F63;
-} 
+#nodejs[data-theme="dark"] .st2,
+#nodejs[data-theme="medium"] .st2 {
+  fill: #699f63;
+}
 .st3 {
   clip-path: url(#XMLID_7_);
 }
@@ -62,7 +62,6 @@
   fill: url(#SVGID_12_);
 }
 
-
 #sNodejs,
 #rNodejs {
   stroke-dasharray: 300;
@@ -73,4 +72,3 @@
   stroke-dasharray: 730;
   stroke-dashoffset: 730;
 }
-
