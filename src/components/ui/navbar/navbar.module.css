@@ -60,12 +60,12 @@
   color: inherit;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 40.625em) {
   .header {
     background: transparent;
   }
 }
-@media (max-width: 37.5em) {
+@media (max-width: 40.625em) {
   .header {
     display: none;
     height: 100%;

@@ -6,6 +6,7 @@ import { NavGuide } from "~/components/nav-guide/NavGuide";
 import styles from "./index.module.css";
 import { slides,slidesES } from "~/data/ui";
 import { LanContext, ThemeContext } from "./layout";
+import { LastSlide } from "~/components/LastSlide/LastSlide";
 
 export default component$(() => {
   const theme_context = useContext(ThemeContext);
@@ -51,6 +52,7 @@ export default component$(() => {
           revert={true}
           image={""}
         />
+        <LastSlide/>
       </div>
     </>
   );

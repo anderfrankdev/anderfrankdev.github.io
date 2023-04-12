@@ -1,6 +1,5 @@
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import styles from "./slide.module.css";
-import { type UiData } from "~/data/ui";
 export const SlideMessage = component$(
   ({ title, content, action, fullscreen}:any) => {
     const text = useSignal<any>(null);

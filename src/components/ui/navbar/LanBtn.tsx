@@ -11,6 +11,7 @@ import { LanContext } from "~/routes/layout";
 export const LanBtn = component$(() => {
   const lan = useContext(LanContext);
   useVisibleTask$(({ track }) => {
+    document.getElementById(lan.value)!.dataset.selectedLan = "true";
     track(lan);
     document.querySelectorAll(".flag").forEach((flag:any)=>{
       if(flag.id.includes(lan.value)){
@@ -18,16 +19,14 @@ export const LanBtn = component$(() => {
       }
       flag.style.display="none"
     })
-    document.getElementById(lan.value)!.dataset.selectedLan = "true";
-    console.log(document.getElementById(lan.value)!.dataset.selected)
   });
   const container = useSignal<any>(null);
   const onSetLan = $((event: any) => {
     lan.value=event.target.id
     container.value && container.value.removeAttribute("open");
     container.value
-      .querySelector("[data-selected-lan]")!
-      .removeAttribute("data-selected-lan");
+      ?.querySelector("[data-selected-lan]")!
+      ?.removeAttribute("data-selected-lan");
     event.target.dataset.selectedLan = "true";
   });
 

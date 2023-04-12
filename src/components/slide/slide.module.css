@@ -62,12 +62,6 @@
   margin-left: 1rem;
 }
 
-@media (max-height: 37.5em) {
-  .button {
-    margin-top: 1rem;
-  }
-  
-}
 @media (max-width: 59.375em) {
   .container,
   .container[data-revert="true"] {
@@ -96,6 +90,7 @@
   .invitation[data-fullscreen="true"]{
     width: 100%;
     padding: 1rem;
+    padding-left: 2rem;
   }
   .button {
     margin-top: 0.6rem;
@@ -104,7 +99,11 @@
     font-weight: 500;
   }
 }
-
+@media (max-width: 37.5em) {
+  .invitation[data-fullscreen="true"]{
+    padding-left: 1rem;
+  }
+}
 @media ((max-height: 34.375em) and (max-width: 25em)) or (max-width: 17.5em) or ((max-height: 38.75em ) and (max-width: 50em)) {
   .container * {
     font-size: 1rem !important;

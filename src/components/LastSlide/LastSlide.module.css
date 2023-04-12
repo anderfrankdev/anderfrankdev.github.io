@@ -1,0 +1,91 @@
+.container{
+	padding-top: 5em;
+	height: calc(100vh);
+	padding-bottom: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100vw - 6rem);
+	margin-inline: 3rem;
+}
+.title{
+	font-size: var(--step-3);
+	color: purple;
+	margin-block: 1rem;
+	font-weight: 400;
+}
+.section{
+	width: 49.8%;
+	padding-block: 2rem;
+	padding-inline: 4rem;
+	color: black;
+	background: whitesmoke;
+	height: 90%;
+}
+.section>div{
+	display:flex;	
+	justify-content: center;	
+	flex-direction: column;
+	height: 100%;
+}
+.content{
+	font-size: var(--step-1);
+}
+.button{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	border: 2px solid;
+	border-radius: 8px;
+	color: purple;
+	font-size: var(--step-1);
+	text-align: center;
+}
+.button svg{
+	margin-left: 2rem;
+	position: relative;
+	top: 0.2em;
+}
+.button path{
+	stroke: purple;
+}
+@media (max-width: 47.625em) {
+	.title{
+		font-size: var(--step-1);
+	}
+	.content{
+		font-size: var(--step-0);
+		text-align: justify;
+	}
+	.button{
+		font-size: var(--step-0);
+	}
+	.button svg{
+
+		position: relative;
+		top: 0.2em;
+	}
+	.container{
+		padding-block:2rem;
+		width:100vw;
+		padding-inline: 1rem;
+		flex-direction: column;
+		padding-top: 4rem;
+	}
+	.section{
+		margin:0;
+		width: 100%;
+	}
+	.section[data-first]{
+		margin-bottom: 6px;
+	}
+}
+@media (max-width: 25.625em) {
+	.button>svg{
+		display: none;
+	}
+	.section{
+		padding: 0.5rem;
+		padding-inline: 1rem;
+	}
+}

@@ -11,6 +11,7 @@ export const NavGuide = component$(() => {
         if (entry.isIntersecting) {
           return (points[index].dataset.isVisible = "true");
         } else {
+          if(!points[index]?.dataset.isVisible) return
           return (points[index].dataset.isVisible = "");
         }
       });
@@ -44,6 +45,7 @@ export const NavGuide = component$(() => {
       <div class={styles.point} id="2"></div>
       <div class={styles.point} id="3"></div>
       <div class={styles.point} id="4"></div>
+      <div class={styles.point} id="5"></div>
     </div>
   );
 });
