@@ -63,7 +63,9 @@ export const Navbar = component$(() => {
               <ThemeBtn />
             </li>
             <li class={""}>
-              Blog
+              <a target="_blank" href="https://medium.com/@anderfrankdev">
+                Blog
+              </a> 
             </li>
             <li class={""}>
               {lan.value==="en"? "About":"Sobre mi"}
