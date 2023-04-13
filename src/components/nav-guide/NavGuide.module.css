@@ -26,6 +26,6 @@
   .container {
     display: flex;
     top: 1rem;
-    left: calc(100% - 1.9rem * 6);
+    left: calc(100% - 1.9rem * 7);
   }
 }

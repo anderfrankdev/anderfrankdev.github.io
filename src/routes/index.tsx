@@ -7,6 +7,7 @@ import styles from "./index.module.css";
 import { slides,slidesES } from "~/data/ui";
 import { LanContext, ThemeContext } from "./layout";
 import { LastSlide } from "~/components/LastSlide/LastSlide";
+import { ContactForm } from "~/components/ContactForm/ContactForm";
 
 export default component$(() => {
   const theme_context = useContext(ThemeContext);
@@ -53,6 +54,7 @@ export default component$(() => {
           image={""}
         />
         <LastSlide/>
+        <ContactForm/>
       </div>
     </>
   );

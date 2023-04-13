@@ -15,12 +15,15 @@
 	font-weight: 400;
 }
 .section{
-	width: 49.8%;
+	width: fit-content;
 	padding-block: 2rem;
 	padding-inline: 4rem;
 	color: black;
 	background: whitesmoke;
-	height: 90%;
+	height: fit-content;
+}
+.section:hover{
+	background: floralwhite;
 }
 .section>div{
 	display:flex;	
@@ -40,6 +43,26 @@
 	color: purple;
 	font-size: var(--step-1);
 	text-align: center;
+	cursor: pointer;
+}
+.section[data-first]{
+	margin-right: 8px;
+}
+.container[data-dark="true"] .section{
+	background: #444;
+	color: white;
+}
+.container[data-dark="true"] .section:hover{
+	background: #222;
+}
+.container[data-dark="true"] .button path{
+	stroke: #ffffdd;
+}
+.container[data-dark="true"] .title{
+	color: #ffffdd;
+}
+.container[data-dark="true"] .button{
+	color: #ffffdd;
 }
 .button svg{
 	margin-left: 2rem;
@@ -71,6 +94,7 @@
 		padding-inline: 1rem;
 		flex-direction: column;
 		padding-top: 4rem;
+		margin: 0;
 	}
 	.section{
 		margin:0;
@@ -78,14 +102,29 @@
 	}
 	.section[data-first]{
 		margin-bottom: 6px;
+		margin-right: 0;
 	}
 }
-@media (max-width: 25.625em) {
+@media (max-width: 25.625em)  {
 	.button>svg{
 		display: none;
 	}
 	.section{
 		padding: 0.5rem;
 		padding-inline: 1rem;
+	}	
+}
+@media (max-width: 18.75em) or ((max-width: 760px) and (max-height:680px)){
+	.title{
+		margin-block:0.5rem ;
+	}
+	.button{
+		margin-block: 0.4rem;
+	}
+	.content{
+		margin-block: 0.4rem;
+	}
+	.container{
+		margin: 0;
 	}
 }

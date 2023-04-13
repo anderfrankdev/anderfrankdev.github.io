@@ -25,7 +25,7 @@ export const LanBtn = component$(() => {
     lan.value=event.target.id
     container.value && container.value.removeAttribute("open");
     container.value
-      ?.querySelector("[data-selected-lan]")!
+      ?.querySelector("[data-selected-lan]")
       ?.removeAttribute("data-selected-lan");
     event.target.dataset.selectedLan = "true";
   });
