@@ -66,7 +66,7 @@ export const head: DocumentHead = {
     {
       name: "description",
       content:
-        "Hello there!, my name is Ander Frank Carrasco also known as anderfrankdev in social media. I'm a fullstack web developer with a passion for crafting beautiful, functional, and user-friendly websites. My goal is to create web experiences that not only look great but also provide a seamless user experience.",
+        "Hi, my name is Ander Frank Carrasco also known as anderfrankdev on social media and I'm a passionate fullstack web developer from Caracas Venezuela.",
     },
   ],
 };
