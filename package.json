@@ -28,6 +28,7 @@
     "@types/node": "^18.15.9",
     "@typescript-eslint/eslint-plugin": "5.56.0",
     "@typescript-eslint/parser": "5.56.0",
+    "cryptr": "^6.2.0",
     "eslint": "8.36.0",
     "eslint-plugin-qwik": "0.100.0",
     "gsap": "^3.11.5",

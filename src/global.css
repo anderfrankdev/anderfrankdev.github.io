@@ -40,6 +40,7 @@ a{
   color: purple;
   transform: translateY(-10px) rotate(-10deg);
 }
+
 ::-webkit-scrollbar {
   height: 8px;
   width: 8px;

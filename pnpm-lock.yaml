@@ -8,6 +8,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.56.0
   '@typescript-eslint/parser': 5.56.0
   animate.css: ^4.1.1
+  cryptr: ^6.2.0
   eslint: 8.36.0
   eslint-plugin-qwik: 0.100.0
   gsap: ^3.11.5
@@ -27,6 +28,7 @@ devDependencies:
   '@types/node': 18.15.11
   '@typescript-eslint/eslint-plugin': 5.56.0_2hcjazgfnbtq42tcc73br2vup4
   '@typescript-eslint/parser': 5.56.0_j4766f7ecgqbon3u7zlxn5zszu
+  cryptr: 6.2.0
   eslint: 8.36.0
   eslint-plugin-qwik: 0.100.0_eslint@8.36.0
   gsap: 3.11.5
@@ -743,6 +745,10 @@ packages:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+    dev: true
+
+  /cryptr/6.2.0:
+    resolution: {integrity: sha512-jYi8SxvOFebTT7EYOABiPpHKY6lwWaP9IVcvT/aIVJUVoFdzTgi0ySPCL78q1ig8w2kwfXFCZACXoCXaye57aw==}
     dev: true
 
   /debug/4.3.4:
