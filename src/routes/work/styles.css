@@ -53,9 +53,10 @@ section h2{
   margin-top: 0;
 }
 .page{
-  padding-top: 90px !important;
+  padding-top: 4rem !important;
   min-height: 100vh;
   overflow-x: hidden;
+  padding-bottom: 3rem !important;
 }
 [data-fullscreen="true"]{
   margin-inline: 0 !important;
@@ -72,15 +73,19 @@ section{
   height: fit-content !important;
   padding-inline: 0 !important;
   justify-content: flex-start !important;
+  padding-top: 0 !important;
 }
 
 @media (min-width:760px){
+  .page{
+    padding-top: 90px !important;
+  }
   [data-fullscreen="true"]{
     padding-inline: 10rem !important;
-    padding-bottom: 9rem;
+    padding-bottom: 4rem !important;
   }
   [data-fullscreen="false"]{
     padding-inline: 10rem !important;
-    padding-bottom: 9rem;
+    padding-bottom: 4rem !important;
   }
 }
