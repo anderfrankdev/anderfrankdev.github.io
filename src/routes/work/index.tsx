@@ -21,8 +21,22 @@ export default component$(() => {
           title={lan.value==="en"?workSlides[0].title:workSlidesES[0].title}
           content={lan.value==="en"?workSlides[0].content:workSlidesES[0].content}
           action={""}
-          revert={true}
-          image={"ReactLogo"}
+          revert={false}
+          image={""}
+          fullscreen={true}
+        />
+        <Slide
+          title={lan.value==="en"?workSlides[1].title:workSlidesES[1].title}
+          content={lan.value==="en"?workSlides[1].content:workSlidesES[1].content}
+          action={""}
+          revert={false}
+          image={"CompuImg"}
+        />
+        <Slide
+          title={lan.value==="en"?workSlides[2].title:workSlidesES[2].title}
+          content={lan.value==="en"?workSlides[2].content:workSlidesES[2].content}
+          action={""}
+          revert={false}
         />
     </div>
   );

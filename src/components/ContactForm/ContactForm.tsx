@@ -7,7 +7,6 @@ export const ContactForm = component$<any>(() => {
   
   const lan = useContext(LanContext);
   const elements = useStore<any>({elements:[]})
-
   useVisibleTask$(()=>{
     elements.elements = [...document.querySelector(`.${styles.container}`)!
         .querySelectorAll<any>("input:not([type=submit]), textarea")]

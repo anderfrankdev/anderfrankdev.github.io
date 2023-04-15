@@ -9,6 +9,14 @@ const images: any = {
   Building: <Building />,
   ReactLogo: <ReactLogo />,
   NodeLogo: <NodejsLogo />,
+  CompuImg: (
+    <div class={"building"}>
+      <img src="/compu.png" style={{
+        width: "100%",
+        height: "100%",
+      }} alt=""/>
+    </div>
+  )
 };
 
 export const Slide = component$((data: any) => {
