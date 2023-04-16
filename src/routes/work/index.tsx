@@ -1,7 +1,7 @@
 import { component$, useContext, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { LanContext, ThemeContext } from "../layout";
-import "./styles.css"
+import "./work.css"
 import { workSlides, workSlidesES } from "~/data/ui";
 import { Slide } from "~/components/slide/Slide";
 
