@@ -115,3 +115,23 @@ export const workSlidesES: UiData["slide"][] = [
     },
   }
 ];
+
+export interface Project{
+  readonly photo:string;
+  readonly name:string;
+  readonly repositoryLink:string;
+  readonly description:string;
+  readonly stackUsed:string[];
+  readonly demoLink:string;
+}
+
+export const projects:Project[] = [
+  {
+    photo:"/heroapp.png",
+    name:"Hero app",
+    repositoryLink:"https://github.com/anderfrankdev/heros-app",
+    demoLink:"https://herosapp-ander.netlify.app/",
+    stackUsed:["Reactjs", "tailwindcss" , "react-router-dom"],
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla interdum mattis. Fusce pharetra erat tincidunt"
+  }
+]

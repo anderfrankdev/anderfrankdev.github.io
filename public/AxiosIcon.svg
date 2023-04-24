@@ -1,0 +1,11 @@
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg">
+  <g id="Grupo-2">
+    <g id="Grupo" transform="translate(4.974787 0)">
+      <path d="M6.09352 2.89967L0 7.86379L3.97945 7.86379L3.97945 23.9999L6.09352 22.2973L6.09352 2.89967L6.09352 2.89967Z" id="Forma" fill="#8F47FF" stroke="none" />
+      <path d="M7.84981 20.8559L14.0505 15.7672L9.95958 15.7672L9.95958 0L7.84981 1.46889L7.84981 20.8559L7.84981 20.8559Z" id="Forma" fill="#8F47FF" stroke="none" />
+    </g>
+    <path d="M0 0L24 0L24 24L0 24L0 0Z" id="Rectángulo" fill="none" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>

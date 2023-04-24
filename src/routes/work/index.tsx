@@ -1,9 +1,9 @@
 import { component$, useContext, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { LanContext, ThemeContext } from "../layout";
-import "./work.css"
-import { workSlides, workSlidesES } from "~/data/ui";
-import { Slide } from "~/components/slide/Slide";
+import styles from "./work.in.css?inline";
+import { projects, workSlides, workSlidesES } from "~/data/ui";
+import { createProjectCard } from "~/components/work/Project";
 
 export default component$(() => {
   const theme_context = useContext(ThemeContext);
@@ -13,31 +13,43 @@ export default component$(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       theme_context.value = "dark";
     }
+
   });
 
   return (
-    <div id="" class={""}>
-        <Slide
-          title={lan.value==="en"?workSlides[0].title:workSlidesES[0].title}
-          content={lan.value==="en"?workSlides[0].content:workSlidesES[0].content}
-          action={""}
-          revert={false}
-          image={""}
-          fullscreen={true}
-        />
-        <Slide
-          title={lan.value==="en"?workSlides[1].title:workSlidesES[1].title}
-          content={lan.value==="en"?workSlides[1].content:workSlidesES[1].content}
-          action={""}
-          revert={false}
-          image={"CompuImg"}
-        />
-        <Slide
-          title={lan.value==="en"?workSlides[2].title:workSlidesES[2].title}
-          content={lan.value==="en"?workSlides[2].content:workSlidesES[2].content}
-          action={""}
-          revert={false}
-        />
+    <div id="" class={`
+      mt-32 min-h-screen
+      w-screen font-bold
+    `}>
+        <article 
+          class={`
+            px-4 sm:px-16
+          `}  
+        >
+          
+          <section>
+            <h2 
+              class={`
+                text-5xl text-center
+                py-4
+              `}
+            >
+              {
+                lan.value==="en"
+                ?"Highlighted projects"
+                :"Mis mejores projectos"
+              }
+            </h2>
+            <p class={"font-light text-center"}>{
+              lan.value==="en"
+              ?"Take a look at my best projects at the moment!"
+              :"Dale un vistazo a mis mejores projectos."
+            }</p>
+            <div class="flex flex-wrap mt-16 justify-center">
+              {projects.map(createProjectCard)}          
+            </div>
+          </section>
+        </article>
     </div>
   );
 });
@@ -51,4 +63,9 @@ export const head: DocumentHead = {
         "Hi, my name is Ander Frank Carrasco also known as anderfrankdev on social media and I'm a passionate fullstack web developer from Caracas Venezuela.",
     },
   ],
+  styles:[
+    {
+      style:styles
+    }
+  ]
 };
