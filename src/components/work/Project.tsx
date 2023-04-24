@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { Project } from "~/data/ui";
+import { Project } from "~/data/workUi";
 
 export const ProjectCard = component$(({demoLink,repositoryLink,photo,name,description,stackUsed}:Project)=>{
 
@@ -7,7 +7,7 @@ export const ProjectCard = component$(({demoLink,repositoryLink,photo,name,descr
 		<div class={`
 				w-[250px] 
 				pb-4 font-normal shadow
-				bg-purple-100
+				bg-blue-100 dark:bg-red-900
 				mx-4 cursor-pointer
 				mb-8
 			`}
@@ -31,7 +31,7 @@ export const ProjectCard = component$(({demoLink,repositoryLink,photo,name,descr
 				<p>{description}</p>
 				<div class={"flex flex-row flex-wrap"}>
 					{stackUsed.map( technology =>
-						<div class={"text-sm  py-2 px-2 mt-4 mr-2 shadow bg-white rounded w-fit"}>{technology}</div>
+						<div class={"text-sm dark:bg-gray-800  py-2 px-2 mt-4 mr-2 shadow bg-white rounded w-fit"}>{technology}</div>
 					)}
 				</div>
 			</article>

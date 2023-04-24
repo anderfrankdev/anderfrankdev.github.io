@@ -14,6 +14,17 @@ export const ThemeBtn = component$(() => {
 
   useVisibleTask$(({ track }) => {
     track(theme);
+
+    if(theme.value==="dark"){
+      document
+        .documentElement
+        .classList.add("dark")
+    }else{
+      document
+        .documentElement
+        .classList.remove("dark")  
+    }
+    
     document
       .querySelector<any>("[data-selected]")
       ?.removeAttribute("data-selected");

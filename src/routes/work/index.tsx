@@ -2,16 +2,16 @@ import { component$, useContext, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { LanContext, ThemeContext } from "../layout";
 import styles from "./work.in.css?inline";
-import { projects, workSlides, workSlidesES } from "~/data/ui";
+import { projects, workSlides, workSlidesES } from "~/data/workUi";
 import { createProjectCard } from "~/components/work/Project";
 
 export default component$(() => {
-  const theme_context = useContext(ThemeContext);
+  const theme = useContext(ThemeContext);
   const lan = useContext(LanContext);
 
   useVisibleTask$(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      theme_context.value = "dark";
+      theme.value = "dark";
     }
 
   });
@@ -23,10 +23,18 @@ export default component$(() => {
     `}>
         <article 
           class={`
-            px-4 sm:px-16
+            px-4 sm:px-32
           `}  
         >
-          
+          <section class={"my-8"}>
+            <h1 class={"text-6xl my-8 py-4"}>About my work</h1>
+            <p class={"font-normal text-lg"}>{
+              lan.value==="en"
+              ? workSlides[0].content
+              : workSlidesES[0].content
+            }</p> 
+          </section>
+          <hr class={"w-1/2 m-auto mb-16"} />
           <section>
             <h2 
               class={`
