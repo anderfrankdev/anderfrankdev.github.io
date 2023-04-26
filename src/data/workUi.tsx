@@ -1,3 +1,4 @@
+import type { UiData } from "./ui";
 
 export const workSlides: UiData["slide"][] = [
   {
@@ -53,5 +54,86 @@ export const projects:Project[] = [
     demoLink:"https://herosapp-ander.netlify.app/",
     stackUsed:["Reactjs", "tailwindcss" , "react-router-dom"],
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla interdum mattis. Fusce pharetra erat tincidunt"
+  },
+  {
+    photo:"/heroapp.png",
+    name:"Hero app",
+    repositoryLink:"https://github.com/anderfrankdev/heros-app",
+    demoLink:"https://herosapp-ander.netlify.app/",
+    stackUsed:["Reactjs", "tailwindcss" , "react-router-dom"],
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla interdum mattis. Fusce pharetra erat tincidunt"
+  },
+  {
+    photo:"/heroapp.png",
+    name:"Hero app",
+    repositoryLink:"https://github.com/anderfrankdev/heros-app",
+    demoLink:"https://herosapp-ander.netlify.app/",
+    stackUsed:["Reactjs", "tailwindcss" , "react-router-dom"],
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla interdum mattis. Fusce pharetra erat tincidunt"
+  },
+]
+
+interface knowledge{
+  name:string;
+  tools:{name:string, image:string}[]
+}
+
+export const knowledges:knowledge[] = [
+  {
+    name:"Backend frameworks",
+    tools:[
+      { name:"Expressjs", image:`/ExpressjsIcon.svg` },
+    ]
+  },
+  {
+    name:"Database",
+    tools:[
+      { name:"MongoDB", image:`/MongoDBIcon.svg` },
+    ]
+  },
+  {
+    name:"Tools",
+    tools:[
+      { name:"Typescript", image:`/TypescriptIcon.svg` },
+      { name:"Javascript", image:`/JavascriptIcon.svg` },
+      { name:"Git", image:`/GitIcon.svg` },
+      { name:"Nodejs", image:`/NodejsIcon.svg` },
+      { name:"Eslint", image:`/EslintIcon.svg` },
+      { name:"Vite", image:`/ViteIcon.svg` },
+      { name:"Prettier", image:`/PrettierIcon.svg` },
+    ]
+  },
+  {
+    name:"Front-end frameworks",
+    tools:[
+      { name:"React", image:`/ReactIcon.svg` },
+      { name:"Qwik", image:`/QwikIcon.svg` },
+      { name:"Preact", image:`/PreactIcon.svg` },
+    ]
+  },
+  {
+    name:"CSS frameworks",
+    tools:[
+      { name:"Tailwind", image:`/TailwindIcon.svg` },
+    ]
+  },
+  {
+    name:"Components UI libraries",
+    tools:[
+      { name:"Flowbite", image:`/FlowbiteIcon.svg` },
+    ]
+  }
+  ,
+  {
+    name:"Libraries",
+    tools:[
+      { name:"Testing library", image:`/Testing libraryIcon.svg` },
+      { name:"Vitest", image:`/VitestIcon.svg` },
+      { name:"Jest", image:`/JestIcon.svg` },
+      { name:"React router", image:`/ReactRouterIcon.svg` },
+      { name:"Axios", image:`/AxiosIcon.svg` },
+      { name:"Redux", image:`/ReduxIcon.svg` },
+      { name:"GraphQL", image:`/GraphQLIcon.svg` },
+    ]
   }
 ]

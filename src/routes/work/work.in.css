@@ -1,6 +1,8 @@
 *>.page{
  overflow-y: auto !important;
  overflow-x: hidden !important;
+ font-size: initial;
+ font-weight: initial;
 }
 
 .light ::-webkit-scrollbar {

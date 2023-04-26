@@ -15,14 +15,20 @@ export const ThemeBtn = component$(() => {
   useVisibleTask$(({ track }) => {
     track(theme);
 
+    if(theme.value==="light"){
+      document
+        .documentElement
+        .classList.remove("dark")
+    }
+    if(theme.value==="medium"){
+      document
+        .documentElement
+        .classList.add("dark") 
+    }
     if(theme.value==="dark"){
       document
         .documentElement
-        .classList.add("dark")
-    }else{
-      document
-        .documentElement
-        .classList.remove("dark")  
+        .classList.add("dark") 
     }
     
     document
