@@ -4,6 +4,7 @@ import { LanContext, ThemeContext } from "../layout";
 import styles from "./work.in.css?inline";
 import { knowledges, projects, workSlides, workSlidesES } from "~/data/workUi";
 import { createProjectCard } from "~/components/work/Project";
+import { ContactForm } from "~/components/ContactForm/ContactForm";
 
 export default component$(() => {
   const theme = useContext(ThemeContext);
@@ -70,7 +71,9 @@ export default component$(() => {
             }</p>
           </section>
           <section class={"mt-20"}>
-            <h2 class={"text-5xl my-8 font-normal"}>📚 Knowledges</h2>
+            <h2 class={"text-5xl my-8 font-normal"}>{
+              lan.value==="en"? "📚 Knowledges":"📚 Conocimientos"
+            }</h2>
             {...knowledges.map((knowledge)=>{
 
               return (
@@ -98,6 +101,7 @@ export default component$(() => {
               : workSlidesES[2].content
             }</p>
           </section>
+          <ContactForm/>
         </article>
     </div>
   );

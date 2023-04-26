@@ -28,8 +28,24 @@ export const workSlides: UiData["slide"][] = [
 ];
 export const workSlidesES: UiData["slide"][] = [
   {
-    title: "Construyamos algo juntos",
-    content: `Puede que necesites un desarrollador web para diseñar una aplicación o un sitio web para tu negocio, o tal vez ya tienes tu propia aplicación y sólo necesitas otro jugador para tu equipo, en ambos casos voy a estar encantado de trabajar contigo para conseguir tus objetivos. Desde aplicaciones de una sola página hasta sitios web estáticos, o en el servidor con una API o una app SSR.`,
+    title: "Sobre mi trabajo",
+    content: `Como desarrollador web fullstack estoy centrado en la creación de sitios web o aplicaciones que proporcionan valor a mis clientes y usuarios finales en el menor tiempo y presupuesto posible. Mi objetivo es hacer la web más bonita, rápida, fácil de usar y accesible.`,
+    action: {
+      text: "About my approach",
+      link: "#",
+    },
+  },
+  {
+    title: "Consideración de desarrollo",
+    content: `Sé que tu proyecto tiene necesidades específicas, y no todas las herramientas pueden ser un ajuste perfecto para él, es por eso que voy a tomar un enfoque pragmático y elegir la tecnología que mejor se adapte a sus necesidades para que pueda escalar mientras se ahorra dinero, tiempo y esfuerzo. Así que puedes estar seguro de que no utilizaré la tecnología por la tecnología ni elegiré los marcos de trabajo o herramientas menos populares.`,
+    action: {
+      text: "Acerca de mi enfoque",
+      link: "#",
+    },
+  },
+  {
+    title: "Construyamos algo increible",
+    content: `Mi ética de trabajo gira en torno al tiempo de desarrollo porque sé lo importante que es para ti y para mí disponer de tiempo y dinero suficientes para invertir en nuestra salud, familia y objetivos, al mismo tiempo que avanzamos y nos adaptamos rápidamente en un mundo tan cambiante. Tengo el sueño de ayudar a construir un planeta mejor para vivir, y veo el software como una herramienta para lograrlo a través de pequeñas acciones. Creo que como persona debo cuidar que mi trabajo no haga daño, sino que ayude a otras personas, así que si tu proyecto promueve la diversidad, la sostenibilidad, o en general va a tener un impacto positivo, entonces me encantaría trabajar contigo.`,
     action: {
       text: "Acerca de mi enfoque",
       link: "#",
@@ -86,7 +102,7 @@ export const knowledges:knowledge[] = [
     ]
   },
   {
-    name:"Database",
+    name:"Databases",
     tools:[
       { name:"MongoDB", image:`/MongoDBIcon.svg` },
     ]

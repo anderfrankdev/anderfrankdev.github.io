@@ -73,9 +73,6 @@ export const Navbar = component$(() => {
             <li class={""}>
               {lan.value==="en"? "Work":"Mi trabajo"}
             </li>
-            <li class={""}>
-              {lan.value==="en"? "Contact":"Contacto"}
-            </li>
           </ul>
         </nav>
         <div
