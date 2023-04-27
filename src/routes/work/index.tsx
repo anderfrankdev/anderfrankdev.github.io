@@ -71,7 +71,8 @@ export default component$(() => {
             }</p>
           </section>
           <section class={"mt-20"}>
-            <h2 class={"text-5xl my-8 font-normal"}>{
+
+            <h2 class={"text-3xl sm:text-5xl my-8 font-bold"}>{
               lan.value==="en"? "📚 Knowledges":"📚 Conocimientos"
             }</h2>
             {...knowledges.map((knowledge)=>{
@@ -81,7 +82,7 @@ export default component$(() => {
                   <h3 class={"text-2xl font-normal my-4"}>{knowledge.name}</h3>
                   <ul class="flex mb-8 mt-8 px-0 justify-start flex-wrap gap-8">
                     {knowledge.tools.map(tool=>
-                      <li key={tool.name} class={"dark:bg-red-900 dark:hover:bg-black hover:bg-red-800 flex rounded-xl mx-4 pl-8 pr-12 items-center py-2 bg-black relative"}><span class={"text-white"}>{tool.name}</span>&nbsp; &nbsp; &nbsp; &nbsp; <span class={"absolute right-[-1rem] rounded-full p-3 bg-white"}><img width={24} height={24} class="" src={tool.image} /></span> </li>
+                      <li key={tool.name} class={"dark:bg-red-900 dark:hover:bg-black hover:bg-red-800 flex rounded-xl mx-4 pl-4 pr-6 items-center py-2 text-sm bg-black relative"}><span class={"text-white"}>{tool.name}</span>&nbsp; &nbsp; &nbsp; &nbsp; <span class={"absolute right-[-1rem] rounded-full p-3 bg-white"}><img width={24} height={24} class="" src={tool.image} /></span> </li>
                     )}
                   </ul>
                 </div>
@@ -101,8 +102,8 @@ export default component$(() => {
               : workSlidesES[2].content
             }</p>
           </section>
-          <ContactForm/>
         </article>
+        <ContactForm/>
     </div>
   );
 });

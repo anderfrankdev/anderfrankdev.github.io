@@ -9,6 +9,11 @@ const images: any = {
   Building: <Building />,
   ReactLogo: <ReactLogo />,
   NodeLogo: <NodejsLogo />,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 5aaafda (UI added)
   CompuImg: (
     <div class={"building"}>
       <img src="/compu.png" style={{
@@ -17,6 +22,10 @@ const images: any = {
       }} alt=""/>
     </div>
   )
+<<<<<<< HEAD
+=======
+>>>>>>> 02beaf8 (UI responsive added)
+>>>>>>> 5aaafda (UI added)
 };
 
 export const Slide = component$((data: any) => {

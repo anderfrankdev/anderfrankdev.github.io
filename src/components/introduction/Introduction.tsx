@@ -48,17 +48,18 @@ export const Introduction = component$<any>(() => {
             {lan.value==="en"
               ? "Hi, my name is"
               : "Hola, me llamo"}&nbsp;
-            <span class={styles.name}>
+            <span class={styles.name+" mt-0"}>
               <FunnyText content="Ander" letterClass="shake" />
             </span>
           </span>
-          <p class={styles.description}>
+          <p class={styles.description +" mt-8"}>
             {
               lan.value==="en"
               ? "I'm a"
               : "Soy un"
             } 
-            <b>
+
+            <b class="font-bold">
               {
                 lan.value==="en"
                 ? " passionate fullstack web developer "

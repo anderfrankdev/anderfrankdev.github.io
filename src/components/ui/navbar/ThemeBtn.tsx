@@ -14,6 +14,11 @@ export const ThemeBtn = component$(() => {
 
   useVisibleTask$(({ track }) => {
     track(theme);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 5aaafda (UI added)
 
     if(theme.value==="light"){
       document
@@ -31,6 +36,10 @@ export const ThemeBtn = component$(() => {
         .classList.add("dark") 
     }
     
+<<<<<<< HEAD
+=======
+>>>>>>> 02beaf8 (UI responsive added)
+>>>>>>> 5aaafda (UI added)
     document
       .querySelector<any>("[data-selected]")
       ?.removeAttribute("data-selected");

@@ -5,6 +5,8 @@
 /server
 .turbo
 
+.turbo
+
 # Development
 node_modules
 

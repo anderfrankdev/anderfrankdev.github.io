@@ -19,5 +19,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: inline mandatory;
+
+    line-height: normal;
   }
 }

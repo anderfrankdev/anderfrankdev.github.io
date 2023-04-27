@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 02beaf8 (UI responsive added)
+>>>>>>> 5aaafda (UI added)
 export interface UiData {
   slide: {
     title: string;

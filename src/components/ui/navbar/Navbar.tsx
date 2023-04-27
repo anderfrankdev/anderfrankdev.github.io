@@ -37,7 +37,14 @@ export const Navbar = component$(() => {
         id="nav"
         style={"--animate-duration: .7s;"}
       >
+<<<<<<< HEAD
         <div class={styles.logo}>
+=======
+        <div class={styles.logo} onClick$={()=>{
+          if(location.pathname!="/") 
+            return window.location.pathname="/";
+        }}>
+>>>>>>> 02beaf8 (UI responsive added)
           <img
             class={styles.logo_img}
             src={`/logo_${theme.value}.png`}
@@ -68,11 +75,24 @@ export const Navbar = component$(() => {
               </a> 
             </li>
             <li class={""}>
+<<<<<<< HEAD
               {lan.value==="en"? "About":"Sobre mi"}
             </li>
             <li class={""}>
               {lan.value==="en"? "Work":"Mi trabajo"}
             </li>
+<<<<<<< HEAD
+=======
+            <li class={""}>
+              {lan.value==="en"? "Contact":"Contacto"}
+=======
+              <a href="/about" target="_self">{lan.value==="en"? "About":"Sobre mi"}</a>
+            </li>
+            <li  class={""}>
+              <a href="/work" target="_self">{lan.value==="en"? "Work":"Mi trabajo"}</a>
+>>>>>>> 02beaf8 (UI responsive added)
+            </li>
+>>>>>>> 5aaafda (UI added)
           </ul>
         </nav>
         <div

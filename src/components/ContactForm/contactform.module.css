@@ -1,4 +1,5 @@
 .container{
+<<<<<<< HEAD
 	min-height: 100vh;
 	width: 100%;
 	padding-inline: 4rem;
@@ -35,10 +36,49 @@
 
 .container form>div input{
 	margin-inline: 1rem;
+=======
+	min-height: 100vh !important;
+	width: 100% !important;
+	padding-inline: 4rem !important;
+	font-size: 1.5rem !important;
+	display: flex !important;
+	justify-content: space-evenly !important;
+	align-items: center !important;
+	flex-direction: column !important;
+	padding-top: 4rem !important;
+}
+.container>div{
+	display: flex !important;
+	padding-inline: 2rem !important;
+	padding-top: 0 !important;
+	width: 100% !important;
+}
+.container>div>div{
+	margin-right: 2rem !important;
+}
+.container img{
+	margin-right: 2rem !important;
+}
+.container h2{
+	text-align: center !important;
+}
+.container form{
+	flex: auto !important;
+	overflow: hidden !important;
+}
+.container form>div{
+	width: 100% !important;
+	display: flex !important;
+}
+
+.container form>div input{
+	margin-inline: 1rem !important;
+>>>>>>> 02beaf8 (UI responsive added)
 	width: calc(50% - 2rem) !important;
 	margin-block: 0 !important;
 }
 .container input{
+<<<<<<< HEAD
 	padding: 0.7rem;
 }
 .container form input,
@@ -103,6 +143,71 @@
 	}
 	.container form>div{
 		flex-direction: column;
+=======
+	padding: 0.7rem !important;
+}
+.container form input,
+.container form textarea{
+	display: block !important;
+	margin-inline: 1rem !important;
+	border-radius: 8px !important;
+	width: calc(100% - 2rem) !important;
+	margin-block: 2rem;
+	padding: 0.7rem !important;
+	background: whitesmoke !important;
+	border: 1px transparent !important;
+}
+.container input[type="submit"]{
+	text-align: left !important;
+	margin-bottom: 0 !important;
+	font-weight: bold !important;
+	background: transparent !important;
+	border-radius: calc(32px / 2) !important;
+	border: 1px solid !important;
+	width: fit-content !important;
+	cursor: pointer !important;
+}
+.container input[type="submit"]:hover{
+	background: floralwhite !important;
+}
+@media (max-height:35em) or (max-width:40.625em) {
+	.container h2{
+		font-size: 1.5rem !important;
+		margin: 0.3rem !important;
+	}
+	.container h3{
+		font-size: 1.25rem !important;
+		margin: 0.3rem !important;
+	}
+	.container p{
+		font-size: 1rem !important;
+	}
+	.container form{
+		margin-left: 1rem !important;
+	}
+}
+@media (max-width:40.625em) {
+	.container{
+		padding: 1rem !important;
+		padding-top: 5rem !important;
+	}
+	.container>div{
+		flex-direction: column-reverse !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.container>div>div{
+		margin-inline: 1rem !important;
+		margin-bottom: 0.5rem !important;
+		text-align: right !important;
+	}
+	.container form{
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+	.container form>div{
+		flex-direction: column !important;
+>>>>>>> 02beaf8 (UI responsive added)
 	}
 	.container form>div input{
 		width: calc(100% - 2rem) !important;
