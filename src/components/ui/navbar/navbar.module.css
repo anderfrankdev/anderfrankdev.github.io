@@ -48,7 +48,7 @@
   margin-left: 0;
   padding: 0;
 }
-.theme_btn[data-lan-btn]{
+.theme_btn[data-lan-btn] {
   width: 4rem;
   z-index: 1002;
 }
@@ -78,7 +78,7 @@
     right: 0;
     left: 0;
   }
-  .theme_btn[data-lan-btn]{
+  .theme_btn[data-lan-btn] {
     width: 8ch;
   }
   .nav_links .theme_btn {

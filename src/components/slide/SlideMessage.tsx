@@ -1,7 +1,7 @@
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import styles from "./slide.module.css";
 export const SlideMessage = component$(
-  ({ title, content, action, fullscreen}:any) => {
+  ({ title, content, action, fullscreen }: any) => {
     const text = useSignal<any>(null);
     useVisibleTask$(({ cleanup }) => {
       text.value.style.transform = "scale(1)";
@@ -28,7 +28,12 @@ export const SlideMessage = component$(
     });
 
     return (
-      <div data-fullscreen={fullscreen+""} class={styles.invitation} ref={text} id="">
+      <div
+        data-fullscreen={fullscreen + ""}
+        class={styles.invitation}
+        ref={text}
+        id=""
+      >
         <h2>{title || ""}</h2>
         <p>{content || ""}</p>
         {action.text && action.link && (

@@ -13,16 +13,16 @@ export const LanBtn = component$(() => {
   useVisibleTask$(({ track }) => {
     document.getElementById(lan.value)!.dataset.selectedLan = "true";
     track(lan);
-    document.querySelectorAll(".flag").forEach((flag:any)=>{
-      if(flag.id.includes(lan.value)){
-        return flag.style.display="initial"
+    document.querySelectorAll(".flag").forEach((flag: any) => {
+      if (flag.id.includes(lan.value)) {
+        return (flag.style.display = "initial");
       }
-      flag.style.display="none"
-    })
+      flag.style.display = "none";
+    });
   });
   const container = useSignal<any>(null);
   const onSetLan = $((event: any) => {
-    lan.value=event.target.id
+    lan.value = event.target.id;
     container.value && container.value.removeAttribute("open");
     container.value
       ?.querySelector("[data-selected-lan]")
@@ -31,10 +31,14 @@ export const LanBtn = component$(() => {
   });
 
   return (
-    <details ref={container}  class={styles.container}>
+    <details ref={container} class={styles.container}>
       <summary>
-        <span id="en-flag" class="flag">🇺🇸</span>
-        <span id="es-flag" style="display:none;" class="flag">🇪🇸</span>
+        <span id="en-flag" class="flag">
+          🇺🇸
+        </span>
+        <span id="es-flag" style="display:none;" class="flag">
+          🇪🇸
+        </span>
       </summary>
       <div class={styles.options} data-select_theme>
         <div onClick$={onSetLan} id="es">

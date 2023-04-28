@@ -14,32 +14,17 @@ export const ThemeBtn = component$(() => {
 
   useVisibleTask$(({ track }) => {
     track(theme);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 5aaafda (UI added)
 
-    if(theme.value==="light"){
-      document
-        .documentElement
-        .classList.remove("dark")
+    if (theme.value === "light") {
+      document.documentElement.classList.remove("dark");
     }
-    if(theme.value==="medium"){
-      document
-        .documentElement
-        .classList.add("dark") 
+    if (theme.value === "medium") {
+      document.documentElement.classList.add("dark");
     }
-    if(theme.value==="dark"){
-      document
-        .documentElement
-        .classList.add("dark") 
+    if (theme.value === "dark") {
+      document.documentElement.classList.add("dark");
     }
-    
-<<<<<<< HEAD
-=======
->>>>>>> 02beaf8 (UI responsive added)
->>>>>>> 5aaafda (UI added)
+
     document
       .querySelector<any>("[data-selected]")
       ?.removeAttribute("data-selected");
@@ -57,19 +42,16 @@ export const ThemeBtn = component$(() => {
 
   return (
     <details ref={container} class={styles.container}>
-      <summary>
-        {lan.value==="en"? "Theme":"Tema"}
-      </summary>
+      <summary>{lan.value === "en" ? "Theme" : "Tema"}</summary>
       <div class={styles.options} data-select_theme>
         <div onClick$={onSetTheme} id="light">
-          {lan.value==="en"? "Light":"Claro"}
+          {lan.value === "en" ? "Light" : "Claro"}
         </div>
         <div onClick$={onSetTheme} id="medium">
-          {lan.value==="en"? "Medium":"Medio"}
-
+          {lan.value === "en" ? "Medium" : "Medio"}
         </div>
         <div onClick$={onSetTheme} id="dark">
-          {lan.value==="en"? "Dark":"Oscuro"}
+          {lan.value === "en" ? "Dark" : "Oscuro"}
         </div>
       </div>
     </details>

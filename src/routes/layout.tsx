@@ -1,14 +1,9 @@
 import { component$, type Signal, Slot, useSignal } from "@builder.io/qwik";
 import { Navbar } from "~/components/ui/navbar/Navbar";
 import "animate.css";
-<<<<<<< HEAD
-=======
-
->>>>>>> 5aaafda (UI added)
 import { useContextProvider, createContextId } from "@builder.io/qwik";
 import themeStyles from "~/assets/themes.module.css";
 import "../global.css";
-
 export const ThemeContext = createContextId<Signal<string>>("theme-context");
 export const LanContext = createContextId<Signal<string>>("lan-context");
 

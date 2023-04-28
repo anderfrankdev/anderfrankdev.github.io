@@ -41,7 +41,7 @@
 .container[data-revert="true"]:first-child {
   margin-left: 0;
 }
-.invitation[data-fullscreen="true"]{
+.invitation[data-fullscreen="true"] {
   width: 90%;
   margin-left: 3rem;
 }
@@ -85,9 +85,8 @@
   .invitation {
     font-size: var(--step-0);
     text-align: justify;
-    
   }
-  .invitation[data-fullscreen="true"]{
+  .invitation[data-fullscreen="true"] {
     width: 100%;
     padding: 1rem;
     padding-left: 2rem;
@@ -100,7 +99,7 @@
   }
 }
 @media (max-width: 37.5em) {
-  .invitation[data-fullscreen="true"]{
+  .invitation[data-fullscreen="true"] {
     padding-left: 1rem;
   }
 }
