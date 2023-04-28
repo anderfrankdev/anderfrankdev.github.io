@@ -25,6 +25,7 @@ export const ContactForm = component$<any>(() => {
     const data = {};
     //@ts-ignore
     elements.elements.forEach((e: any) => {
+      //@ts-ignore
       data[e.name] = e.value;
     });
     const res = await fetch(`https://formsubmit.co/ajax/${eAddr}`, {
