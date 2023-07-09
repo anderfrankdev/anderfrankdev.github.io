@@ -32,6 +32,7 @@ export default component$(() => {
         </div>
       </div>
       <img src="/about_page.jpg" alt="" class={"w-[350px] h-[460px]"}/>
+      
     </article>
   );
 });

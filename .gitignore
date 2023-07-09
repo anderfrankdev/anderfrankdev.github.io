@@ -6,7 +6,7 @@
 .turbo
 
 .turbo
-
+.env
 # Development
 node_modules
 
