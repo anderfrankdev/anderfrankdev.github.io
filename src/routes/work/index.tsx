@@ -31,7 +31,7 @@ export default component$(() => {
       >
         <section class={"my-8"}>
           <h1 class={"text-6xl my-8 py-4"}>
-            {lan.value === "en"?"About my work":"Acerca de mi trabajo"}
+            {lan.value === "en" ? "About my work" : "Acerca de mi trabajo"}
           </h1>
           <p class={"font-normal text-lg"}>
             {lan.value === "en"

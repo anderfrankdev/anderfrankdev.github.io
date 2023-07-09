@@ -1,8 +1,7 @@
-import { component$, useContext,useVisibleTask$ } from "@builder.io/qwik";
+import { component$, useContext, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { LanContext, ThemeContext } from "../layout";
 import css from "./about.css?inline";
-import { knowledges } from "~/data/workUi";
 import { introduccionES, introductionEn } from "~/data/about/aboutData";
 export default component$(() => {
   const theme = useContext(ThemeContext);
@@ -20,19 +19,32 @@ export default component$(() => {
       class={"w-screen flex min-h-screen pt-14 px-24 items-center"}
     >
       <div class={""}>
-      	<h1 class={"text-6xl font-bold my-8"}>{
-          lan.value==="es" ?  "Acerca de mi":"About me"
-        }</h1>
-        <div >
-          {
-            lan.value==="es" 
-              ? introduccionES.map((p,i)=><p dangerouslySetInnerHTML={p} class={"text-xl sm:mr-8 my-8"} key={i}> </p>)
-              : introductionEn.map((p,i)=><p dangerouslySetInnerHTML={p} class={"text-xl sm:mr-8 my-8"} key={i}> </p>)
-          }
+        <h1 class={"text-6xl font-bold my-8"}>
+          {lan.value === "es" ? "Acerca de mi" : "About me"}
+        </h1>
+        <div>
+          {lan.value === "es"
+            ? introduccionES.map((p, i) => (
+                <p
+                  dangerouslySetInnerHTML={p}
+                  class={"text-xl sm:mr-8 my-8"}
+                  key={i}
+                >
+                  {" "}
+                </p>
+              ))
+            : introductionEn.map((p, i) => (
+                <p
+                  dangerouslySetInnerHTML={p}
+                  class={"text-xl sm:mr-8 my-8"}
+                  key={i}
+                >
+                  {" "}
+                </p>
+              ))}
         </div>
       </div>
-      <img src="/about_page.jpg" alt="" class={"w-[350px] h-[460px]"}/>
-      
+      <img src="/about_page.jpg" alt="" class={"w-[350px] h-[460px]"} />
     </article>
   );
 });
