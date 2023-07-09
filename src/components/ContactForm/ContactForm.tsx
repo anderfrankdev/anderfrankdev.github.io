@@ -7,11 +7,15 @@ import {
 } from "@builder.io/qwik";
 import styles from "./contactform.module.css";
 import { LanContext } from "~/routes/layout";
+import { Loader } from "./loadingIcon";
 
 const eAddr = "anderfrankdev@gmail.com";
 export const ContactForm = component$<any>(() => {
   const lan = useContext(LanContext);
+ 
+  const status = useStore<any>({ isLoading:false });
   const elements = useStore<any>({ elements: [] });
+
   useVisibleTask$(() => {
     elements.elements = [
       ...document
@@ -22,23 +26,26 @@ export const ContactForm = component$<any>(() => {
 
   const onSubmit = $(async (e: any) => {
     e.preventDefault();
+    status.isLoading = true
     const data = {};
     //@ts-ignore
     elements.elements.forEach((e: any) => {
       //@ts-ignore
       data[e.name] = e.value;
     });
-    const res = await fetch(`https://formsubmit.co/ajax/${eAddr}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    console.log(res);
+    const res = await fetch("https://formsubmit.co/ajax/anderfrankdev@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    if(res.status===200) status.isLoading = false
   });
 
   return (
+    <>   
     <section class={styles.container}>
       <img src="" alt="" />
       <h2 class={"my-[30px] font-bold text-[36px]"}>
@@ -120,6 +127,9 @@ export const ContactForm = component$<any>(() => {
           />
         </form>
       </div>
+    {status.isLoading && <Loader/>} 
+      
     </section>
+    </>
   );
 });

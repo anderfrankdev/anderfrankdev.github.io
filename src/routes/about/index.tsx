@@ -3,6 +3,10 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { LanContext, ThemeContext } from "../layout";
 import css from "./about.css?inline";
 import { introduccionES, introductionEn } from "~/data/about/aboutData";
+import {interestingFacts} from "~/data/about/aboutData";
+import { AboutCards } from "~/components/aboutCards/aboutCards";
+import { ContactForm } from "~/components/ContactForm/ContactForm";
+
 export default component$(() => {
   const theme = useContext(ThemeContext);
   const lan = useContext(LanContext);
@@ -14,6 +18,7 @@ export default component$(() => {
   });
 
   return (
+    <>
     <article
       id=""
       class={"w-screen flex min-h-screen pt-14 px-24 items-center"}
@@ -43,9 +48,16 @@ export default component$(() => {
                 </p>
               ))}
         </div>
-      </div>
-      <img src="/about_page.jpg" alt="" class={"w-[350px] h-[460px]"} />
+      </div> 
+      <img src="/1688932051522.jpg" alt="" class={"w-[350px] h-[460px]"} />
     </article>
+    <hr class="w-1/2 m-auto mb-8 mt-8" />
+    <section class="">
+      <h2 class={"text-4xl text-center my-8"}>Interesting facts</h2>
+      <AboutCards cardsInfo={interestingFacts} />
+    </section>
+    <ContactForm />
+    </>
   );
 });
 

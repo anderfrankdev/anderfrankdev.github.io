@@ -8,6 +8,7 @@
   align-items: center !important;
   flex-direction: column !important;
   padding-top: 4rem !important;
+  position: relative;
 }
 .container > div {
   display: flex !important;

@@ -11,3 +11,22 @@ export const introductionEn = [
   "My interests are varied and range from mathematics and physics, to chess and soccer. I love nature and ecology, and I'm always looking for ways to use technology to help protect our planet.",
   "In my free time, I enjoy spending time with my family, and I also like to go hiking and explore nature. As a developer, I focus on continually learning and improving my skills, and I'm excited for the opportunities the future may bring.",
 ];
+
+export const interestingFacts = [
+  {
+    "title":"What programming languages are you proficient in?",
+    content:"I'm proficient in Python, R and JavaScript but I'm also really interested in learning other languages like Rust, Elixir, Haskell, and Elm."
+  },
+  {
+    "title": "How do you approach problem-solving as a developer?",
+    "content": "I approach problem-solving by breaking down the problem into smaller, more manageable pieces. I also like to brainstorm multiple possible solutions and evaluate the pros and cons of each."
+  },
+  {
+    "title": "What inspired you to pursue a degree in Statistical Sciences and Mathematics?",
+    "content": "I've always been passionate about mathematics and statistics, and I enjoy using these skills to solve complex problems. Pursuing a degree in these fields allows me to deepen my knowledge and apply my skills in new and interesting ways."
+  },
+  {
+    "title": "What are your long-term career goals?",
+    "content": "My long-term career goals are to continue growing and developing as a developer, and to work on projects that have a positive impact on people's lives."
+  }
+]
