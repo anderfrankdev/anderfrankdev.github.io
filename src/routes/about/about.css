@@ -26,8 +26,8 @@ header {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-@media (max-width: 37.5em){
-  .page{
+@media (max-width: 37.5em) {
+  .page {
     display: flex;
     flex-direction: column;
     overflow-y: initial !important;
@@ -35,8 +35,8 @@ header {
     height: initial !important;
   }
 }
-@media (max-width: 280px){
-  .photo{
+@media (max-width: 280px) {
+  .photo {
     width: 275px;
   }
 }

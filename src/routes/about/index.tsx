@@ -2,8 +2,12 @@ import { component$, useContext, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { LanContext, ThemeContext } from "../layout";
 import css from "./about.css?inline";
-import { interestingFactsEs, introduccionES, introductionEn } from "~/data/about/aboutData";
-import {interestingFacts} from "~/data/about/aboutData";
+import {
+  interestingFactsEs,
+  introduccionES,
+  introductionEn,
+} from "~/data/about/aboutData";
+import { interestingFacts } from "~/data/about/aboutData";
 import { AboutCards } from "~/components/aboutCards/aboutCards";
 import { ContactForm } from "~/components/ContactForm/ContactForm";
 
@@ -19,44 +23,52 @@ export default component$(() => {
 
   return (
     <>
-    <article
-      id=""
-      class={"w-screen flex flex-col sm:flex-row min-h-screen pt-14 px-6 text-justify sm:px-24 sm:px-0 items-center"}
-    >
-      <div class={""}>
-        <h1 class={"text-6xl font-bold my-8"}>
-          {lan.value === "es" ? "Acerca de mi" : "About me"}
-        </h1>
-        <div>
-          {lan.value === "es"
-            ? introduccionES.map((p, i) => (
-                <p
-                  dangerouslySetInnerHTML={p}
-                  class={"text-xl sm:mr-8 my-8"}
-                  key={i}
-                >
-                  {" "}
-                </p>
-              ))
-            : introductionEn.map((p, i) => (
-                <p
-                  dangerouslySetInnerHTML={p}
-                  class={"text-xl sm:mr-8 my-8"}
-                  key={i}
-                >
-                  {" "}
-                </p>
-              ))}
+      <article
+        id=""
+        class={
+          "w-screen flex flex-col sm:flex-row min-h-screen pt-14 px-6 text-justify sm:px-24 sm:px-0 items-center"
+        }
+      >
+        <div class={""}>
+          <h1 class={"text-6xl font-bold my-8"}>
+            {lan.value === "es" ? "Acerca de mi" : "About me"}
+          </h1>
+          <div>
+            {lan.value === "es"
+              ? introduccionES.map((p, i) => (
+                  <p
+                    dangerouslySetInnerHTML={p}
+                    class={"text-xl sm:mr-8 my-8"}
+                    key={i}
+                  >
+                    {" "}
+                  </p>
+                ))
+              : introductionEn.map((p, i) => (
+                  <p
+                    dangerouslySetInnerHTML={p}
+                    class={"text-xl sm:mr-8 my-8"}
+                    key={i}
+                  >
+                    {" "}
+                  </p>
+                ))}
+          </div>
         </div>
-      </div> 
-      <img src="/1688932051522.jpg" alt="" class={"photo w-[320px] sm:w-[350px] h-[460px]"} />
-    </article>
-    <hr class="w-1/2 m-auto mb-8 mt-8" />
-    <section class="">
-      <h2 class={"text-4xl text-center my-8"}>Interesting facts</h2>
-      <AboutCards cardsInfo={lan.value==="en"?interestingFacts:interestingFactsEs} />
-    </section>
-    <ContactForm />
+        <img
+          src="/1688932051522.jpg"
+          alt=""
+          class={"photo w-[320px] sm:w-[350px] h-[460px]"}
+        />
+      </article>
+      <hr class="w-1/2 m-auto mb-8 mt-8" />
+      <section class="">
+        <h2 class={"text-4xl text-center my-8"}>Interesting facts</h2>
+        <AboutCards
+          cardsInfo={lan.value === "en" ? interestingFacts : interestingFactsEs}
+        />
+      </section>
+      <ContactForm />
     </>
   );
 });

@@ -14,37 +14,46 @@ export const introductionEn = [
 
 export const interestingFacts = [
   {
-    "title":"What programming languages are you proficient in?",
-    content:"I'm proficient in Python, R and JavaScript but I'm also really interested in learning other languages like Rust, Elixir, Haskell, and Elm."
+    title: "What programming languages are you proficient in?",
+    content:
+      "I'm proficient in Python, R and JavaScript but I'm also really interested in learning other languages like Rust, Elixir, Haskell, and Elm.",
   },
   {
-    "title": "How do you approach problem-solving as a developer?",
-    "content": "I approach problem-solving by breaking down the problem into smaller, more manageable pieces. I also like to brainstorm multiple possible solutions and evaluate the pros and cons of each."
+    title: "How do you approach problem-solving as a developer?",
+    content:
+      "I approach problem-solving by breaking down the problem into smaller, more manageable pieces. I also like to brainstorm multiple possible solutions and evaluate the pros and cons of each.",
   },
   {
-    "title": "What inspired you to pursue a degree in Statistical Sciences and Mathematics?",
-    "content": "I've always been passionate about mathematics and statistics, and I enjoy using these skills to solve complex problems. Pursuing a degree in these fields allows me to deepen my knowledge and apply my skills in new and interesting ways."
+    title:
+      "What inspired you to pursue a degree in Statistical Sciences and Mathematics?",
+    content:
+      "I've always been passionate about mathematics and statistics, and I enjoy using these skills to solve complex problems. Pursuing a degree in these fields allows me to deepen my knowledge and apply my skills in new and interesting ways.",
   },
   {
-    "title": "What are your long-term career goals?",
-    "content": "My long-term career goals are to continue growing and developing as a developer, and to work on projects that have a positive impact on people's lives."
-  }
-]
+    title: "What are your long-term career goals?",
+    content:
+      "My long-term career goals are to continue growing and developing as a developer, and to work on projects that have a positive impact on people's lives.",
+  },
+];
 export const interestingFactsEs = [
   {
-    "title": "¿Qué lenguajes de programación dominas?",
-    content: "Domino Python, R y JavaScript pero también estoy muy interesado en aprender otros lenguajes como Rust, Elixir, Haskell y Elm."
+    title: "¿Qué lenguajes de programación dominas?",
+    content:
+      "Domino Python, R y JavaScript pero también estoy muy interesado en aprender otros lenguajes como Rust, Elixir, Haskell y Elm.",
   },
   {
-    "title": "¿Cómo enfocas la resolución de problemas como desarrollador?",
-    "content": "Abordo la resolución de problemas dividiéndolos en partes más pequeñas y manejables. También me gusta hacer una lluvia de ideas con múltiples soluciones posibles y evaluar los pros y los contras de cada una."
+    title: "¿Cómo enfocas la resolución de problemas como desarrollador?",
+    content:
+      "Abordo la resolución de problemas dividiéndolos en partes más pequeñas y manejables. También me gusta hacer una lluvia de ideas con múltiples soluciones posibles y evaluar los pros y los contras de cada una.",
   },
   {
-    "title": "¿Qué te inspiró para estudiar Ciencias Estadísticas y Matemáticas?",
-    "content": "Siempre me han apasionado las matemáticas y la estadística, y disfruto utilizando estas habilidades para resolver problemas complejos. Cursar un grado en estos campos me permite profundizar en mis conocimientos y aplicar mis habilidades de formas nuevas e interesantes."
+    title: "¿Qué te inspiró para estudiar Ciencias Estadísticas y Matemáticas?",
+    content:
+      "Siempre me han apasionado las matemáticas y la estadística, y disfruto utilizando estas habilidades para resolver problemas complejos. Cursar un grado en estos campos me permite profundizar en mis conocimientos y aplicar mis habilidades de formas nuevas e interesantes.",
   },
   {
-    "title": "¿Cuáles son tus objetivos profesionales a largo plazo?",
-    "content": "Mis objetivos profesionales a largo plazo son seguir creciendo y desarrollándome como desarrollador, y trabajar en proyectos que tengan un impacto positivo en la vida de las personas."
-  }
-]
+    title: "¿Cuáles son tus objetivos profesionales a largo plazo?",
+    content:
+      "Mis objetivos profesionales a largo plazo son seguir creciendo y desarrollándome como desarrollador, y trabajar en proyectos que tengan un impacto positivo en la vida de las personas.",
+  },
+];
