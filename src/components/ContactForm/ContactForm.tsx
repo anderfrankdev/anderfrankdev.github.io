@@ -1,19 +1,19 @@
 import {
   component$,
-  $,
   useContext,
   useVisibleTask$,
   useStore,
 } from "@builder.io/qwik";
+import {onSubmit} from "./onSubmit"
 import styles from "./contactform.module.css";
 import { LanContext } from "~/routes/layout";
 import { Loader } from "./loadingIcon";
+import { DangerAlert, SucessAlert } from "./FormAlerts";
 
-const eAddr = "anderfrankdev@gmail.com";
 export const ContactForm = component$<any>(() => {
   const lan = useContext(LanContext);
  
-  const status = useStore<any>({ isLoading:false });
+  const status = useStore<any>({ isLoading:false, error:false,sent:false });
   const elements = useStore<any>({ elements: [] });
 
   useVisibleTask$(() => {
@@ -22,26 +22,6 @@ export const ContactForm = component$<any>(() => {
         .querySelector(`.${styles.container}`)!
         .querySelectorAll<any>("input:not([type=submit]), textarea"),
     ];
-  });
-
-  const onSubmit = $(async (e: any) => {
-    e.preventDefault();
-    status.isLoading = true
-    const data = {};
-    //@ts-ignore
-    elements.elements.forEach((e: any) => {
-      //@ts-ignore
-      data[e.name] = e.value;
-    });
-    const res = await fetch("https://formsubmit.co/ajax/anderfrankdev@gmail.com", {
-        method: "POST",
-        headers: { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    if(res.status===200) status.isLoading = false
   });
 
   return (
@@ -85,7 +65,7 @@ export const ContactForm = component$<any>(() => {
 
         <form
           class={"text-xs text-black font-normal"}
-          onSubmit$={onSubmit}
+          onSubmit$={onSubmit(status,elements)}
           preventdefault:submit
         >
           <div>
@@ -127,8 +107,9 @@ export const ContactForm = component$<any>(() => {
           />
         </form>
       </div>
-    {status.isLoading && <Loader/>} 
-      
+      {status.isLoading && <Loader/>} 
+      {status.error && <DangerAlert/>} 
+      {status.sent && <SucessAlert/>} 
     </section>
     </>
   );

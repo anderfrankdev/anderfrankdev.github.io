@@ -2,7 +2,7 @@ import { component$, useContext, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { LanContext, ThemeContext } from "../layout";
 import css from "./about.css?inline";
-import { introduccionES, introductionEn } from "~/data/about/aboutData";
+import { interestingFactsEs, introduccionES, introductionEn } from "~/data/about/aboutData";
 import {interestingFacts} from "~/data/about/aboutData";
 import { AboutCards } from "~/components/aboutCards/aboutCards";
 import { ContactForm } from "~/components/ContactForm/ContactForm";
@@ -54,7 +54,7 @@ export default component$(() => {
     <hr class="w-1/2 m-auto mb-8 mt-8" />
     <section class="">
       <h2 class={"text-4xl text-center my-8"}>Interesting facts</h2>
-      <AboutCards cardsInfo={interestingFacts} />
+      <AboutCards cardsInfo={lan.value==="en"?interestingFacts:interestingFactsEs} />
     </section>
     <ContactForm />
     </>

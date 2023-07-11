@@ -116,6 +116,7 @@ export const knowledges: knowledge[] = [
       { name: "Eslint", image: `/EslintIcon.svg` },
       { name: "Vite", image: `/ViteIcon.svg` },
       { name: "Prettier", image: `/PrettierIcon.svg` },
+      { name: "Docker", image: `/DockerIcon.svg` },
     ],
   },
   {
