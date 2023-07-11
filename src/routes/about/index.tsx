@@ -21,7 +21,7 @@ export default component$(() => {
     <>
     <article
       id=""
-      class={"w-screen flex min-h-screen pt-14 px-24 items-center"}
+      class={"w-screen flex flex-col sm:flex-row min-h-screen pt-14 px-6 text-justify sm:px-24 sm:px-0 items-center"}
     >
       <div class={""}>
         <h1 class={"text-6xl font-bold my-8"}>
@@ -49,7 +49,7 @@ export default component$(() => {
               ))}
         </div>
       </div> 
-      <img src="/1688932051522.jpg" alt="" class={"w-[350px] h-[460px]"} />
+      <img src="/1688932051522.jpg" alt="" class={"photo w-[320px] sm:w-[350px] h-[460px]"} />
     </article>
     <hr class="w-1/2 m-auto mb-8 mt-8" />
     <section class="">
