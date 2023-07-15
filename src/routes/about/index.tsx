@@ -26,7 +26,7 @@ export default component$(() => {
       <article
         id=""
         class={
-          "w-screen flex flex-col sm:flex-row min-h-screen pt-14 px-6 text-justify sm:px-24 sm:px-0 items-center"
+          "w-screen flex flex-col sm:flex-row min-h-screen pt-14 px-6 text-justify sm:px-24 items-center"
         }
       >
         <div class={""}>

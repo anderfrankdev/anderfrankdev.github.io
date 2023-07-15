@@ -66,6 +66,7 @@
 .container input[type="submit"]:hover {
   background: floralwhite !important;
 }
+
 @media (max-height: 35em) or (max-width: 40.625em) {
   .container h2 {
     font-size: 1.5rem !important;

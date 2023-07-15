@@ -68,6 +68,11 @@ export const Navbar = component$(() => {
             <li class={styles.theme_btn}>
               <ThemeBtn />
             </li>
+            <li class={"sm:hidden"}>
+              <a href="/" target="_self">
+                {lan.value === "en" ? "Home" : "Inicio"}
+              </a>
+            </li>
             <li class={""}>
               <a target="_blank" href="https://medium.com/@anderfrankdev">
                 Blog

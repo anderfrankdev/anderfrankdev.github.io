@@ -6,12 +6,13 @@ import {
 } from "@builder.io/qwik";
 import { onSubmit } from "./onSubmit";
 import styles from "./contactform.module.css";
-import { LanContext } from "~/routes/layout";
+import { LanContext, ThemeContext } from "~/routes/layout";
 import { Loader } from "./loadingIcon";
 import { DangerAlert, SucessAlert } from "./FormAlerts";
 
 export const ContactForm = component$<any>(() => {
   const lan = useContext(LanContext);
+  const theme = useContext(ThemeContext);
 
   const status = useStore<any>({ isLoading: false, error: false, sent: false });
   const elements = useStore<any>({ elements: [] });
@@ -100,8 +101,13 @@ export const ContactForm = component$<any>(() => {
             ></textarea>
             <input
               class={
-                "dark:text-white dark:border-white focus:outline-none mb-0 mt-0"
+                "dark:text-white dark:border-white focus:outline-none mb-0 mt-0 "
               }
+              style={{
+                color:theme.value==="dark"?"#fff !important":"#000",
+                borderColor:theme.value==="dark"?"#fff !important":"#000"
+              }}
+
               type="submit"
               value={lan.value === "en" ? "SEND MESSAGE" : "ENVIAR"}
             />

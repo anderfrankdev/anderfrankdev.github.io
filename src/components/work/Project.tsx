@@ -1,5 +1,6 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useContext } from "@builder.io/qwik";
 import type { Project } from "~/data/workUi";
+import { ThemeContext } from "~/routes/layout";
 
 export const ProjectCard = component$(
   ({
@@ -10,8 +11,14 @@ export const ProjectCard = component$(
     description,
     stackUsed,
   }: Project) => {
+    
+    const theme = useContext(ThemeContext);
+
     return (
       <div
+        style={{
+          backgroundColor:theme.value==="dark"?"#7f1d1d !important":"",
+        }}
         class={`
 				w-[250px] 
 				pb-4 font-normal shadow
@@ -60,6 +67,12 @@ export const ProjectCard = component$(
                 class={
                   "text-sm dark:text-white dark:bg-gray-800  py-2 px-2 mt-4 mr-2 shadow bg-white rounded w-fit"
                 }
+                style={{
+                  backgroundColor:
+                    theme.value==="dark"
+                    ?"#1f2937 !important"
+                    :"",
+                }}
               >
                 {technology}
               </div>
