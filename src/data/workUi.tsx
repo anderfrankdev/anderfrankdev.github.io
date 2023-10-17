@@ -64,32 +64,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    photo: "/heroapp.png",
+    photo: "/merncalendar.jpeg",
     name: "Hero app",
-    repositoryLink: "https://github.com/anderfrankdev/heros-app",
-    demoLink: "https://herosapp-ander.netlify.app/",
-    stackUsed: ["Reactjs", "tailwindcss", "react-router-dom"],
+    repositoryLink: "https://github.com/anderfrankdev/MERN-Calendar",
+    demoLink: "https://ander-mern-calendar.netlify.app/",
+    stackUsed: ["Reactjs", "tailwindcss", "react-router-dom","Redux","Docker","GraphQL"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla interdum mattis. Fusce pharetra erat tincidunt",
-  },
-  {
-    photo: "/heroapp.png",
-    name: "Hero app",
-    repositoryLink: "https://github.com/anderfrankdev/heros-app",
-    demoLink: "https://herosapp-ander.netlify.app/",
-    stackUsed: ["Reactjs", "tailwindcss", "react-router-dom"],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla interdum mattis. Fusce pharetra erat tincidunt",
-  },
-  {
-    photo: "/heroapp.png",
-    name: "Hero app",
-    repositoryLink: "https://github.com/anderfrankdev/heros-app",
-    demoLink: "https://herosapp-ander.netlify.app/",
-    stackUsed: ["Reactjs", "tailwindcss", "react-router-dom"],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla interdum mattis. Fusce pharetra erat tincidunt",
-  },
+      "This is a web application that allows users to create, edit, delete and view events on a calendar. It is built with the MERN stack, which consists of MongoDB, Express.js, React.js and Node.js.",
+  }
 ];
 
 interface knowledge {
@@ -145,6 +127,8 @@ export const knowledges: knowledge[] = [
       { name: "Axios", image: `/AxiosIcon.svg` },
       { name: "Redux", image: `/ReduxIcon.svg` },
       { name: "GraphQL", image: `/GraphQLIcon.svg` },
+      { name: "Apollo", image: `/ApolloIcon.svg` },
+      { name: "Firebase", image: `/FirebaseIcon.svg` },
     ],
   },
 ];
