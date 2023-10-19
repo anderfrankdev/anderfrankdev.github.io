@@ -64,15 +64,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    photo: "/merncalendar.jpeg",
-    name: "Mern Calendar",
-    repositoryLink: "https://github.com/anderfrankdev/MERN-Calendar",
-    demoLink: "https://ander-mern-calendar.netlify.app/",
-    stackUsed: ["Reactjs", "tailwindcss", "react-router-dom","Redux","Docker","GraphQL"],
-    description:
-      "This is a web application that allows users to create, edit, delete and view events on a calendar. It is built with the MERN stack, which consists of MongoDB, Express.js, React.js and Node.js.",
-  },
-  {
     photo: "/gjpLanging.png",
     name: "GJP Landing page",
     repositoryLink: "#",
@@ -80,6 +71,15 @@ export const projects: Project[] = [
     stackUsed: ["Next", "tailwindcss", "react","typescript","Git","EsLint","VSCode"],
     description:
       "This is the landind page of the company GJP Servicios, a wireless internet provider located in the parish Nueva Cua in Venezuela. The page is made in next with typescript.",
+  },
+  {
+    photo: "/merncalendar.jpeg",
+    name: "Mern Calendar",
+    repositoryLink: "https://github.com/anderfrankdev/MERN-Calendar",
+    demoLink: "https://ander-mern-calendar.netlify.app/",
+    stackUsed: ["Reactjs", "tailwindcss", "react-router-dom","Redux","Docker","GraphQL"],
+    description:
+      "This is a web application that allows users to create, edit, delete and view events on a calendar. It is built with the MERN stack, which consists of MongoDB, Express.js, React.js and Node.js.",
   }
 ];
 
