@@ -68,7 +68,7 @@ export const projects: Project[] = [
     name: "GJP Landing page",
     repositoryLink: "#",
     demoLink: "https://gjp.vercel.app/",
-    stackUsed: ["Next", "tailwindcss", "react","typescript","Git","EsLint","VSCode"],
+    stackUsed: ["Nextjs", "tailwindcss", "react","typescript","Git","EsLint","VSCode"],
     description:
       "This is the landind page of the company GJP Servicios, a wireless internet provider located in the parish Nueva Cua in Venezuela. The page is made in next with typescript.",
   },
@@ -116,6 +116,7 @@ export const knowledges: knowledge[] = [
       { name: "React", image: `/ReactIcon.svg` },
       { name: "Qwik", image: `/QwikIcon.svg` },
       { name: "Preact", image: `/PreactIcon.svg` },
+      { name: "Nextjs", image: `/NextjsIcon.svg` },
     ],
   },
   {
